@@ -41,33 +41,23 @@
 
    <title>Yuwakshan</title>
 
-  <link rel="canonical" href="https://yuwakshan.github.io/">
+  <link rel="canonical"
+        href="https://yuwakshan.github.io/">
 
-  <meta property="og:site_name" content="Yuwakshan">
+  <meta property="og:site_name"
+        content="Yuwakshan">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Yuwakshan">
-  <meta name="twitter:description" content="Yuwakshan">
-  <meta name="twitter:image" content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
+  <meta name="twitter:card"
+        content="summary_large_image">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Yuwakshan",
-    "url": "https://yuwakshan.github.io/",
-    "image": "https://yuwakshan.github.io/IMG_20260121_185335.jpg",
-    "sameAs": [
-      "https://www.instagram.com/yuwakshan",
-      "https://t.me/Yuwakshan",
-      "https://github.com/Yuwakshan",
-      "https://www.facebook.com/share/1DUMgbSXtg/Fb",
-      "https://www.youtube.com/@withmyuniverse-m3p",
-      "https://www.tiktok.com/@universe0318?_r=1&_t=ZS-9A8hhVDNdGW",
-      "https://x.com/Yuwakshan"
-    ]
-  }
-  </script>
+  <meta name="twitter:title"
+        content="Yuwakshan">
+
+  <meta name="twitter:description"
+        content="Yuwakshan">
+
+  <meta name="twitter:image"
+        content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
 
 <link rel="icon"
       type="image/jpeg"
@@ -1828,6 +1818,113 @@
 
     }
 
+    /* =========================
+       PUBLIC MESSAGES
+    ========================= */
+
+    .message-board {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 30px;
+    }
+
+    .message-form-card,
+    .public-list-card {
+      padding: 32px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+
+    .message-form-card h3, .public-list-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .message-note {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    #messageForm {
+      display: grid;
+      gap: 14px;
+    }
+
+    #messageForm input,
+    #messageForm textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: rgba(0,0,0,0.22);
+      color: white;
+      outline: none;
+      font: inherit;
+      resize: vertical;
+    }
+
+    #messageForm input:focus,
+    #messageForm textarea:focus {
+      border-color: #00f7ff;
+      box-shadow: 0 0 0 3px rgba(0,247,255,0.08);
+    }
+
+    #messageForm input::placeholder,
+    #messageForm textarea::placeholder {
+      color: rgba(255,255,255,0.45);
+    }
+
+    .message-status {
+      min-height: 22px;
+      margin-top: 12px;
+      color: #00f7ff;
+      font-size: 14px;
+    }
+
+    .approved-messages {
+      display: grid;
+      gap: 14px;
+      max-height: 520px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .public-message {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .public-message strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #00f7ff;
+    }
+
+    .public-message p {
+      color: rgba(255,255,255,0.78);
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .empty-messages {
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    @media (max-width: 800px) {
+      .message-board {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
 </head>
@@ -1886,6 +1983,10 @@
 
       <li>
         <a href="#social">Social</a>
+      </li>
+
+      <li>
+        <a href="#public-messages">Messages</a>
       </li>
 
       <li>
@@ -2420,7 +2521,40 @@
 
 
 
-    <!-- CONTACT -->
+    <!-- PUBLIC MESSAGES -->
+
+  <section id="public-messages" class="section reveal">
+
+    <div class="section-title">
+      <span>03</span>
+      <h2>Public Messages</h2>
+    </div>
+
+    <div class="message-board">
+      <div class="message-form-card">
+        <h3>💬 Send Me a Message</h3>
+        <p class="message-note">Your message will stay private until Yuwakshan approves it.</p>
+
+        <form id="messageForm">
+          <input id="messageName" type="text" maxlength="40" placeholder="Your name" required>
+          <textarea id="messageText" maxlength="300" rows="5" placeholder="Write your message..." required></textarea>
+          <button class="btn btn-primary" type="submit">Send Message 🚀</button>
+        </form>
+        <p id="messageStatus" class="message-status"></p>
+      </div>
+
+      <div class="public-list-card">
+        <h3>✨ Approved Messages</h3>
+        <div id="approvedMessages" class="approved-messages">
+          <p class="empty-messages">No approved messages yet.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
 
     <section
       id="contact"
@@ -2878,6 +3012,68 @@
 
   </script>
 
+
+
+  <!-- PUBLIC MESSAGE DEMO STORAGE -->
+  <script>
+    /*
+      IMPORTANT:
+      This front-end version stores messages in localStorage only.
+      For real public messages + private admin approval across devices,
+      connect this section to Firebase/Supabase with authentication.
+    */
+    const messageForm = document.getElementById("messageForm");
+    const messageName = document.getElementById("messageName");
+    const messageText = document.getElementById("messageText");
+    const messageStatus = document.getElementById("messageStatus");
+    const approvedMessages = document.getElementById("approvedMessages");
+
+    function escapeHTML(value) {
+      return value.replace(/[&<>"']/g, c => ({
+        "&":"&amp;", "<":"&lt;", ">":"&gt;",
+        '"':"&quot;", "'":"&#039;"
+      }[c]));
+    }
+
+    function getApprovedMessages() {
+      try {
+        return JSON.parse(localStorage.getItem("yuwakshanApprovedMessages") || "[]");
+      } catch { return []; }
+    }
+
+    function renderApprovedMessages() {
+      const messages = getApprovedMessages();
+      if (!messages.length) {
+        approvedMessages.innerHTML = '<p class="empty-messages">No approved messages yet.</p>';
+        return;
+      }
+      approvedMessages.innerHTML = messages.map(m => `
+        <article class="public-message">
+          <strong>👤 ${escapeHTML(m.name)}</strong>
+          <p>${escapeHTML(m.text)}</p>
+        </article>
+      `).join("");
+    }
+
+    if (messageForm) {
+      messageForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const name = messageName.value.trim();
+        const text = messageText.value.trim();
+        if (!name || !text) return;
+
+        /* Pending messages are NOT added to the public list. */
+        const pending = JSON.parse(localStorage.getItem("yuwakshanPendingMessages") || "[]");
+        pending.push({ name, text, createdAt: Date.now(), approved: false });
+        localStorage.setItem("yuwakshanPendingMessages", JSON.stringify(pending));
+
+        messageForm.reset();
+        messageStatus.textContent = "Message sent for approval. Thank you! ✓";
+      });
+    }
+
+    renderApprovedMessages();
+  </script>
 
 </body>
 
