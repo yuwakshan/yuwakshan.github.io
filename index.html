@@ -1,1931 +1,844 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#080b18">
+<title>Yuwakshan</title>
 
 <meta name="description" content="Yuwakshan">
 
-  <meta name="keywords"
-        content="Yuwakshan, Yuwakshan Sivakumar, Yuwakshan Official, Yuwakshan Sri Lanka, Physical Science, A/L 2028">
+<meta name="keywords"
+content="Yuwakshan, Yuwakshan Sivakumar, Yuwakshan Sri Lanka, Physical Science, A/L 2028">
 
-  <meta name="author"
-        content="Yuwakshan Sivakumar">
+<meta name="author" content="Yuwakshan Sivakumar">
 
-  <meta name="robots"
-        content="index, follow">
+<meta name="robots" content="index, follow">
 
-  <meta name="google-site-verification"
-        content="O3h0UmiOyKvFsGiKP3uJWnzc-irtKVEqD9LneReM8RU">
+<meta name="google-site-verification"
+content="O3h0UmiOyKvFsGiKP3uJWnzc-irtKVEqD9LneReM8RU">
 
-  <meta property="og:title"
-        content="Yuwakshan">
+<link rel="canonical"
+href="https://yuwakshan.github.io/">
 
-  <meta property="og:description"
-        content="Yuwakshan">
+<meta property="og:title" content="Yuwakshan">
 
-  <meta property="og:url"
-        content="https://yuwakshan.github.io/">
+<meta property="og:description"
+content="Yuwakshan">
 
-  <meta property="og:type"
-        content="website">
+<meta property="og:url"
+content="https://yuwakshan.github.io/">
 
-  <meta property="og:image"
-        content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
+<meta property="og:type" content="website">
 
-   <title>Yuwakshan</title>
-
-  <link rel="canonical"
-        href="https://yuwakshan.github.io/">
-
-  <meta property="og:site_name"
-        content="Yuwakshan">
-
-  <meta name="twitter:card"
-        content="summary_large_image">
-
-  <meta name="twitter:title"
-        content="Yuwakshan">
-
-  <meta name="twitter:description"
-        content="Yuwakshan">
-
-  <meta name="twitter:image"
-        content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
+<meta property="og:image"
+content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
 
 <link rel="icon"
-      type="image/jpeg"
-      href="IMG_20260121_185335.jpg">
-
-  <style>
-
-    /* =========================
-       RESET
-    ========================= */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-
-    body {
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      color: #ffffff;
-
-      background:
-        radial-gradient(
-          circle at 10% 10%,
-          rgba(0, 247, 255, 0.13),
-          transparent 30%
-        ),
-
-        radial-gradient(
-          circle at 90% 20%,
-          rgba(140, 60, 255, 0.15),
-          transparent 30%
-        ),
-
-        radial-gradient(
-          circle at 50% 100%,
-          rgba(255, 0, 170, 0.10),
-          transparent 35%
-        ),
-
-        #070914;
-
-      min-height: 100vh;
-
-      overflow-x: hidden;
-    }
-
-
-    body::before {
-
-      content: "";
-
-      position: fixed;
-
-      inset: 0;
-
-      z-index: -5;
-
-      background:
-
-        linear-gradient(
-          120deg,
-          rgba(0,247,255,0.05),
-          transparent 40%,
-          rgba(150,0,255,0.08)
-        );
-
-      animation:
-        backgroundMove 12s ease-in-out infinite alternate;
-    }
-
-
-    @keyframes backgroundMove {
-
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.08);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    img {
-      max-width: 100%;
-    }
-
-
-    /* =========================
-       BACKGROUND BLOBS
-    ========================= */
-
-    .bg-blob {
-
-      position: fixed;
-
-      width: 350px;
-      height: 350px;
-
-      border-radius: 50%;
-
-      filter: blur(90px);
-
-      opacity: 0.25;
-
-      z-index: -2;
-
-      pointer-events: none;
-    }
-
-
-    .blob1 {
-
-      background: #00eaff;
-
-      top: 5%;
-      left: -120px;
-
-      animation:
-        blobMove1 12s ease-in-out infinite;
-    }
-
-
-    .blob2 {
-
-      background: #7b2cff;
-
-      top: 35%;
-      right: -150px;
-
-      animation:
-        blobMove2 15s ease-in-out infinite;
-    }
-
-
-    .blob3 {
-
-      background: #ff00b7;
-
-      bottom: -150px;
-      left: 35%;
-
-      animation:
-        blobMove3 18s ease-in-out infinite;
-    }
-
-
-    @keyframes blobMove1 {
-
-      0%,100% {
-        transform: translate(0,0);
-      }
-
-      50% {
-        transform: translate(150px,100px);
-      }
-    }
-
-
-    @keyframes blobMove2 {
-
-      0%,100% {
-        transform: translate(0,0);
-      }
-
-      50% {
-        transform: translate(-120px,100px);
-      }
-    }
-
-
-    @keyframes blobMove3 {
-
-      0%,100% {
-        transform: translate(0,0);
-      }
-
-      50% {
-        transform: translate(100px,-100px);
-      }
-    }
-
-
-    /* =========================
-       PARTICLES
-    ========================= */
-
-    .particles {
-
-      position: fixed;
-
-      inset: 0;
-
-      pointer-events: none;
-
-      z-index: -1;
-
-      overflow: hidden;
-    }
-
-
-    .particle {
-
-      position: absolute;
-
-      width: 4px;
-      height: 4px;
-
-      background: rgba(255,255,255,0.6);
-
-      border-radius: 50%;
-
-      box-shadow:
-        0 0 12px rgba(0,247,255,0.8);
-
-      animation:
-        floatParticle linear infinite;
-    }
-
-
-    .particle:nth-child(1) {
-      left: 10%;
-      animation-duration: 12s;
-      animation-delay: -2s;
-    }
-
-    .particle:nth-child(2) {
-      left: 25%;
-      animation-duration: 16s;
-      animation-delay: -7s;
-    }
-
-    .particle:nth-child(3) {
-      left: 40%;
-      animation-duration: 11s;
-      animation-delay: -4s;
-    }
-
-    .particle:nth-child(4) {
-      left: 55%;
-      animation-duration: 18s;
-      animation-delay: -9s;
-    }
-
-    .particle:nth-child(5) {
-      left: 70%;
-      animation-duration: 14s;
-      animation-delay: -3s;
-    }
-
-    .particle:nth-child(6) {
-      left: 85%;
-      animation-duration: 20s;
-      animation-delay: -10s;
-    }
-
-
-    @keyframes floatParticle {
-
-      0% {
-        top: 110%;
-        opacity: 0;
-      }
-
-      10% {
-        opacity: 1;
-      }
-
-      90% {
-        opacity: 1;
-      }
-
-      100% {
-        top: -10%;
-        opacity: 0;
-      }
-    }
-
-
-    /* =========================
-       NAVBAR
-    ========================= */
-
-    .navbar {
-
-      position: fixed;
-
-      top: 18px;
-
-      left: 50%;
-
-      transform: translateX(-50%);
-
-      width: calc(100% - 35px);
-
-      max-width: 1200px;
-
-      padding: 14px 22px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      z-index: 1000;
-
-      background:
-        rgba(255,255,255,0.07);
-
-      backdrop-filter:
-        blur(20px);
-
-      -webkit-backdrop-filter:
-        blur(20px);
-
-      border:
-        1px solid rgba(255,255,255,0.14);
-
-      border-radius: 20px;
-
-      box-shadow:
-        0 10px 40px rgba(0,0,0,0.3);
-    }
-
-
-    .logo {
-
-      font-size: 21px;
-
-      font-weight: 900;
-
-      letter-spacing: 3px;
-
-      background:
-        linear-gradient(
-          90deg,
-          #00f7ff,
-          #8d5cff,
-          #ff3dcc
-        );
-
-      -webkit-background-clip: text;
-
-      background-clip: text;
-
-      color: transparent;
-    }
-
-
-    .nav-links {
-
-      display: flex;
-
-      gap: 8px;
-
-      list-style: none;
-    }
-
-
-    .nav-links a {
-
-      padding: 10px 15px;
-
-      border-radius: 12px;
-
-      color: rgba(255,255,255,0.75);
-
-      transition:
-        0.3s ease;
-    }
-
-
-    .nav-links a:hover {
-
-      color: #ffffff;
-
-      background:
-        rgba(255,255,255,0.09);
-
-      transform:
-        translateY(-2px);
-    }
-
-
-    .menu-btn {
-
-      display: none;
-
-      border: none;
-
-      background:
-        rgba(255,255,255,0.08);
-
-      color: white;
-
-      font-size: 24px;
-
-      width: 42px;
-      height: 42px;
-
-      border-radius: 12px;
-
-      cursor: pointer;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-
-      min-height: 100vh;
-
-      padding:
-        150px 25px
-        80px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      text-align: center;
-
-      position: relative;
-    }
-
-
-    .hero-content {
-
-      max-width: 850px;
-
-      animation:
-        heroAppear 1s ease forwards;
-    }
-
-
-    @keyframes heroAppear {
-
-      from {
-        opacity: 0;
-        transform:
-          translateY(40px);
-      }
-
-      to {
-        opacity: 1;
-        transform:
-          translateY(0);
-      }
-    }
-
-
-    /* Profile image */
-
-    .profile-wrapper {
-
-      width: 180px;
-      height: 180px;
-
-      margin:
-        0 auto 30px;
-
-      padding: 5px;
-
-      border-radius: 50%;
-
-      background:
-        linear-gradient(
-          135deg,
-          #00f7ff,
-          #7b2cff,
-          #ff00c8
-        );
-
-      animation:
-        profileFloat 5s ease-in-out infinite;
-
-      box-shadow:
-        0 0 35px
-        rgba(0,247,255,0.25);
-    }
-
-
-    @keyframes profileFloat {
-
-      0%,100% {
-        transform:
-          translateY(0)
-          rotate(0deg);
-      }
-
-      50% {
-        transform:
-          translateY(-12px)
-          rotate(2deg);
-      }
-    }
-
-
-    .profile-wrapper img {
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      border-radius: 50%;
-
-      border:
-        5px solid #080b18;
-    }
-
-
-    .hero-small {
-
-      display: inline-block;
-
-      padding:
-        8px 15px;
-
-      border-radius: 30px;
-
-      background:
-        rgba(255,255,255,0.07);
-
-      border:
-        1px solid rgba(255,255,255,0.14);
-
-      backdrop-filter:
-        blur(15px);
-
-      color:
-        rgba(255,255,255,0.75);
-
-      margin-bottom: 18px;
-    }
-
-
-    .hero h1 {
-
-      font-size:
-        clamp(48px, 9vw, 100px);
-
-      line-height: 1;
-
-      font-weight: 900;
-
-      letter-spacing: -3px;
-
-      background:
-        linear-gradient(
-          90deg,
-          #ffffff,
-          #00f7ff,
-          #a77cff,
-          #ffffff
-        );
-
-      background-size:
-        250% auto;
-
-      -webkit-background-clip: text;
-
-      background-clip: text;
-
-      color: transparent;
-
-      animation:
-        textGradient 5s linear infinite;
-    }
-
-
-    @keyframes textGradient {
-
-      to {
-        background-position:
-          250% center;
-      }
-    }
-
-
-    .hero h2 {
-
-      margin-top: 20px;
-
-      font-size:
-        clamp(20px, 4vw, 32px);
-
-      font-weight: 600;
-    }
-
-
-    .hero h2 span {
-
-      color: #00f7ff;
-
-      text-shadow:
-        0 0 20px
-        rgba(0,247,255,0.5);
-    }
-
-
-    .typing {
-
-      margin-top: 12px;
-
-      min-height: 30px;
-
-      color:
-        rgba(255,255,255,0.65);
-
-      font-size: 18px;
-    }
-
-
-    .hero-buttons {
-
-      margin-top: 35px;
-
-      display: flex;
-
-      justify-content: center;
-
-      gap: 15px;
-
-      flex-wrap: wrap;
-    }
-
-
-    .btn {
-
-      padding:
-        14px 23px;
-
-      border-radius: 14px;
-
-      border:
-        1px solid rgba(255,255,255,0.16);
-
-      background:
-        rgba(255,255,255,0.08);
-
-      backdrop-filter:
-        blur(15px);
-
-      transition:
-        0.35s ease;
-    }
-
-
-    .btn-primary {
-
-      background:
-        linear-gradient(
-          135deg,
-          #00cfff,
-          #744cff
-        );
-
-      border: none;
-
-      box-shadow:
-        0 10px 30px
-        rgba(80,100,255,0.25);
-    }
-
-
-    .btn:hover {
-
-      transform:
-        translateY(-5px)
-        scale(1.04);
-
-      box-shadow:
-        0 15px 35px
-        rgba(0,0,0,0.35);
-    }
-
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .section {
-
-      width:
-        min(1150px, calc(100% - 40px));
-
-      margin:
-        0 auto;
-
-      padding:
-        110px 0;
-    }
-
-
-    .section-title {
-
-      margin-bottom: 55px;
-
-      text-align: center;
-    }
-
-
-    .section-title span {
-
-      color: #00f7ff;
-
-      font-size: 14px;
-
-      letter-spacing: 4px;
-    }
-
-
-    .section-title h2 {
-
-      margin-top: 8px;
-
-      font-size:
-        clamp(35px, 5vw, 55px);
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-container {
-
-      display: grid;
-
-      grid-template-columns:
-        0.9fr 1.1fr;
-
-      gap: 70px;
-
-      align-items: center;
-    }
-
-
-    /* Image */
-
-    .about-image-box {
-
-      position: relative;
-
-      width: 100%;
-
-      max-width: 430px;
-
-      margin: auto;
-
-      perspective: 1000px;
-    }
-
-
-    .image-glow {
-
-      position: absolute;
-
-      inset: -30px;
-
-      border-radius: 35px;
-
-      background:
-        linear-gradient(
-          45deg,
-          #00f7ff,
-          #7b2cff,
-          #ff00c8,
-          #00f7ff
-        );
-
-      filter:
-        blur(45px);
-
-      opacity: 0.3;
-
-      animation:
-        glowMove 5s ease-in-out infinite;
-    }
-
-
-    @keyframes glowMove {
-
-      0%,100% {
-        transform:
-          scale(0.95)
-          rotate(0deg);
-
-        opacity: 0.25;
-      }
-
-      50% {
-        transform:
-          scale(1.1)
-          rotate(5deg);
-
-        opacity: 0.5;
-      }
-    }
-
-
-    .about-image-card {
-
-      position: relative;
-
-      overflow: hidden;
-
-      aspect-ratio: 1 / 1;
-
-      border-radius: 30px;
-
-      background:
-        rgba(255,255,255,0.08);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.2);
-
-      backdrop-filter:
-        blur(20px);
-
-      box-shadow:
-        0 30px 70px
-        rgba(0,0,0,0.45);
-
-      transition:
-        transform 0.5s
-        cubic-bezier(.2,.8,.2,1),
-        box-shadow 0.5s ease;
-
-      transform-style:
-        preserve-3d;
-    }
-
-
-    .about-image-card:hover {
-
-      transform:
-        scale(1.07)
-        translateY(-12px)
-        rotateX(3deg)
-        rotateY(-3deg);
-
-      box-shadow:
-        0 40px 90px
-        rgba(0,0,0,0.6),
-
-        0 0 45px
-        rgba(0,247,255,0.3);
-    }
-
-
-    .about-image-card img {
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      display: block;
-
-      transition:
-        transform 0.7s ease,
-        filter 0.5s ease;
-    }
-
-
-    .about-image-card:hover img {
-
-      transform:
-        scale(1.12);
-
-      filter:
-        brightness(0.7);
-    }
-
-
-    .image-overlay {
-
-      position: absolute;
-
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      padding:
-        60px 25px 25px;
-
-      background:
-        linear-gradient(
-          transparent,
-          rgba(0,0,0,0.9)
-        );
-
-      transform:
-        translateY(15px);
-
-      opacity: 0;
-
-      transition:
-        0.4s ease;
-    }
-
-
-    .about-image-card:hover
-    .image-overlay {
-
-      opacity: 1;
-
-      transform:
-        translateY(0);
-    }
-
-
-    .image-overlay h3 {
-
-      font-size: 25px;
-
-      letter-spacing: 3px;
-    }
-
-
-    .image-overlay p {
-
-      margin-top: 6px;
-
-      color:
-        rgba(255,255,255,0.7);
-    }
-
-
-    /* About text */
-
-    .about-text {
-
-      padding: 35px;
-
-      border-radius: 28px;
-
-      background:
-        rgba(255,255,255,0.055);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.12);
-
-      backdrop-filter:
-        blur(20px);
-
-      box-shadow:
-        0 20px 60px
-        rgba(0,0,0,0.2);
-
-      transition:
-        0.4s ease;
-    }
-
-
-    .about-text:hover {
-
-      transform:
-        translateY(-7px);
-
-      background:
-        rgba(255,255,255,0.075);
-    }
-
-
-    .about-text h3 {
-
-      font-size:
-        clamp(28px, 4vw, 40px);
-
-      margin-bottom: 22px;
-    }
-
-
-    .about-text h3 span {
-
-      color: #00f7ff;
-    }
-
-
-    .about-text p {
-
-      line-height: 1.8;
-
-      color:
-        rgba(255,255,255,0.68);
-
-      margin-bottom: 15px;
-    }
-
-
-    /* =========================
-       INFO CARDS
-    ========================= */
-
-    .info-grid {
-
-      margin-top: 30px;
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(2,1fr);
-
-      gap: 15px;
-    }
-
-
-    .info-card {
-
-      padding: 20px;
-
-      display: flex;
-
-      gap: 15px;
-
-      align-items: center;
-
-      border-radius: 20px;
-
-      background:
-        rgba(255,255,255,0.06);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.1);
-
-      backdrop-filter:
-        blur(15px);
-
-      transition:
-        0.35s ease;
-    }
-
-
-    .info-card:hover {
-
-      transform:
-        translateY(-7px)
-        scale(1.02);
-
-      border-color:
-        rgba(0,247,255,0.4);
-
-      box-shadow:
-        0 15px 35px
-        rgba(0,0,0,0.25);
-    }
-
-
-    .info-icon {
-
-      width: 48px;
-      height: 48px;
-
-      display: grid;
-
-      place-items: center;
-
-      border-radius: 14px;
-
-      background:
-        rgba(0,247,255,0.1);
-
-      font-size: 22px;
-    }
-
-
-    .info-card h4 {
-
-      margin-bottom: 4px;
-    }
-
-
-    .info-card p {
-
-      margin: 0;
-
-      font-size: 13px;
-    }
-
-
-    /* =========================
-       SOCIAL
-    ========================= */
-
-    .social-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
-      gap: 18px;
-    }
-
-
-    .social-card {
-
-      min-height: 120px;
-
-      padding: 22px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 15px;
-
-      border-radius: 23px;
-
-      background:
-        rgba(255,255,255,0.055);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.12);
-
-      backdrop-filter:
-        blur(20px);
-
-      transition:
-        0.4s cubic-bezier(.2,.8,.2,1);
-
-      position: relative;
-
-      overflow: hidden;
-    }
-
-
-    .social-card::before {
-
-      content: "";
-
-      position: absolute;
-
-      width: 100px;
-      height: 100px;
-
-      border-radius: 50%;
-
-      background:
-        rgba(0,247,255,0.15);
-
-      filter: blur(30px);
-
-      top: -50px;
-      right: -40px;
-
-      transition:
-        0.4s ease;
-    }
-
-
-    .social-card:hover {
-
-      transform:
-        translateY(-9px)
-        scale(1.03);
-
-      border-color:
-        rgba(255,255,255,0.25);
-
-      box-shadow:
-        0 20px 45px
-        rgba(0,0,0,0.3);
-    }
-
-
-    .social-card:hover::before {
-
-      transform:
-        scale(2);
-    }
-
-
-    .social-icon {
-
-      width: 55px;
-      height: 55px;
-
-      flex-shrink: 0;
-
-      display: grid;
-
-      place-items: center;
-
-      border-radius: 17px;
-
-      background:
-        rgba(255,255,255,0.1);
-
-      font-size: 24px;
-
-      transition:
-        0.4s ease;
-    }
-
-
-    .social-card:hover
-    .social-icon {
-
-      transform:
-        rotate(-8deg)
-        scale(1.12);
-    }
-
-
-    .social-card h3 {
-
-      font-size: 17px;
-
-      margin-bottom: 5px;
-    }
-
-
-    .social-card p {
-
-      font-size: 13px;
-
-      color:
-        rgba(255,255,255,0.55);
-    }
-
-
-    .social-card > span:last-child {
-
-      margin-left: auto;
-
-      font-size: 20px;
-
-      opacity: 0.5;
-
-      transition:
-        0.3s ease;
-    }
-
-
-    .social-card:hover
-    > span:last-child {
-
-      opacity: 1;
-
-      transform:
-        translate(4px,-4px);
-    }
-
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact-box {
-
-      text-align: center;
-
-      padding: 60px 30px;
-
-      border-radius: 30px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(0,247,255,0.08),
-          rgba(125,60,255,0.08)
-        );
-
-      border:
-        1px solid
-        rgba(255,255,255,0.14);
-
-      backdrop-filter:
-        blur(25px);
-
-      box-shadow:
-        0 30px 70px
-        rgba(0,0,0,0.25);
-
-      position: relative;
-
-      overflow: hidden;
-    }
-
-
-    .contact-box::before {
-
-      content: "";
-
-      position: absolute;
-
-      width: 250px;
-      height: 250px;
-
-      border-radius: 50%;
-
-      background:
-        rgba(0,247,255,0.12);
-
-      filter:
-        blur(70px);
-
-      left: -100px;
-      top: -100px;
-    }
-
-
-    .contact-box h3 {
-
-      position: relative;
-
-      font-size:
-        clamp(28px,5vw,45px);
-
-      margin-bottom: 15px;
-    }
-
-
-    .contact-box p {
-
-      position: relative;
-
-      color:
-        rgba(255,255,255,0.65);
-
-      max-width: 600px;
-
-      margin:
-        0 auto;
-    }
-
-
-    .contact-buttons {
-
-      position: relative;
-
-      margin-top: 30px;
-
-      display: flex;
-
-      justify-content: center;
-
-      gap: 15px;
-
-      flex-wrap: wrap;
-    }
-
-
-    .contact-btn {
-
-      padding:
-        13px 22px;
-
-      border-radius: 14px;
-
-      background:
-        rgba(255,255,255,0.08);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.15);
-
-      transition:
-        0.3s ease;
-    }
-
-
-    .contact-btn:hover {
-
-      background:
-        rgba(255,255,255,0.14);
-
-      transform:
-        translateY(-5px);
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-
-      margin-top: 60px;
-
-      padding:
-        50px 20px 30px;
-
-      text-align: center;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.1);
-
-      background:
-        rgba(0,0,0,0.18);
-
-      backdrop-filter:
-        blur(15px);
-    }
-
-
-    footer h2 {
-
-      letter-spacing: 5px;
-
-      background:
-        linear-gradient(
-          90deg,
-          #00f7ff,
-          #a56cff,
-          #ff42d0
-        );
-
-      -webkit-background-clip: text;
-
-      background-clip: text;
-
-      color: transparent;
-    }
-
-
-    footer p {
-
-      margin-top: 12px;
-
-      color:
-        rgba(255,255,255,0.55);
-    }
-
-
-    .footer-socials {
-
-      margin-top: 20px;
-
-      display: flex;
-
-      justify-content: center;
-
-      gap: 20px;
-
-      flex-wrap: wrap;
-    }
-
-
-    .footer-socials a {
-
-      color:
-        rgba(255,255,255,0.65);
-
-      transition:
-        0.3s ease;
-    }
-
-
-    .footer-socials a:hover {
-
-      color:
-        #00f7ff;
-
-      transform:
-        translateY(-3px);
-    }
-
-
-    .copyright {
-
-      font-size: 13px;
-    }
-
-
-    /* =========================
-       SCROLL TOP
-    ========================= */
-
-    #scrollTop {
-
-      position: fixed;
-
-      right: 22px;
-      bottom: 22px;
-
-      width: 48px;
-      height: 48px;
-
-      border: none;
-
-      border-radius: 15px;
-
-      background:
-        rgba(255,255,255,0.1);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.15);
-
-      backdrop-filter:
-        blur(15px);
-
-      color: white;
-
-      font-size: 20px;
-
-      cursor: pointer;
-
-      opacity: 0;
-
-      visibility: hidden;
-
-      transform:
-        translateY(20px);
-
-      transition:
-        0.3s ease;
-
-      z-index: 900;
-    }
-
-
-    #scrollTop.show {
-
-      opacity: 1;
-
-      visibility: visible;
-
-      transform:
-        translateY(0);
-    }
-
-
-    #scrollTop:hover {
-
-      background:
-        rgba(0,247,255,0.15);
-
-      transform:
-        translateY(-5px);
-    }
-
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    .reveal {
-
-      opacity: 0;
-
-      transform:
-        translateY(45px);
-
-      transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-    }
-
-
-    .reveal.active {
-
-      opacity: 1;
-
-      transform:
-        translateY(0);
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 850px) {
-
-      .nav-links {
-
-        position: absolute;
-
-        top: 75px;
-
-        left: 0;
-
-        width: 100%;
-
-        padding: 15px;
-
-        display: none;
-
-        flex-direction: column;
-
-        background:
-          rgba(10,12,25,0.92);
-
-        backdrop-filter:
-          blur(25px);
-
-        border:
-          1px solid
-          rgba(255,255,255,0.1);
-
-        border-radius: 18px;
-      }
-
-
-      .nav-links.active {
-        display: flex;
-      }
-
-
-      .nav-links a {
-        width: 100%;
-        text-align: center;
-      }
-
-
-      .menu-btn {
-        display: block;
-      }
-
-
-      .about-container {
-
-        grid-template-columns:
-          1fr;
-
-        gap: 50px;
-      }
-
-
-      .about-image-box {
-
-        max-width: 350px;
-      }
-
-
-      .social-grid {
-
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-      .navbar {
-
-        top: 10px;
-
-        width:
-          calc(100% - 20px);
-      }
-
-
-      .hero {
-
-        padding-top: 130px;
-      }
-
-
-      .profile-wrapper {
-
-        width: 145px;
-        height: 145px;
-      }
-
-
-      .section {
-
-        width:
-          calc(100% - 28px);
-
-        padding:
-          80px 0;
-      }
-
-
-      .about-text {
-
-        padding: 25px;
-      }
-
-
-      .info-grid {
-
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .social-grid {
-
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .contact-box {
-
-        padding:
-          45px 20px;
-      }
-
-    }
-
-
-    /* =========================
-       REDUCED MOTION
-    ========================= */
-
-    @media (prefers-reduced-motion: reduce) {
-
-      *,
-      *::before,
-      *::after {
-
-        animation-duration:
-          0.01ms !important;
-
-        animation-iteration-count:
-          1 !important;
-
-        scroll-behavior:
-          auto !important;
-
-        transition-duration:
-          0.01ms !important;
-      }
-
-    }
-
-    /* =========================
-       PUBLIC MESSAGES
-    ========================= */
-
-    .message-board {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 30px;
-    }
-
-    .message-form-card,
-    .public-list-card {
-      padding: 32px;
-      border-radius: 28px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.14);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-    }
-
-    .message-form-card h3, .public-list-card h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .message-note {
-      color: rgba(255,255,255,0.6);
-      font-size: 14px;
-      margin-bottom: 22px;
-      line-height: 1.6;
-    }
-
-    #messageForm {
-      display: grid;
-      gap: 14px;
-    }
-
-    #messageForm input,
-    #messageForm textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 14px;
-      padding: 14px 16px;
-      background: rgba(0,0,0,0.22);
-      color: white;
-      outline: none;
-      font: inherit;
-      resize: vertical;
-    }
-
-    #messageForm input:focus,
-    #messageForm textarea:focus {
-      border-color: #00f7ff;
-      box-shadow: 0 0 0 3px rgba(0,247,255,0.08);
-    }
-
-    #messageForm input::placeholder,
-    #messageForm textarea::placeholder {
-      color: rgba(255,255,255,0.45);
-    }
-
-    .message-status {
-      min-height: 22px;
-      margin-top: 12px;
-      color: #00f7ff;
-      font-size: 14px;
-    }
-
-    .approved-messages {
-      display: grid;
-      gap: 14px;
-      max-height: 520px;
-      overflow-y: auto;
-      padding-right: 4px;
-    }
-
-    .public-message {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-    }
-
-    .public-message strong {
-      display: block;
-      margin-bottom: 7px;
-      color: #00f7ff;
-    }
-
-    .public-message p {
-      color: rgba(255,255,255,0.78);
-      line-height: 1.6;
-      word-break: break-word;
-    }
-
-    .empty-messages {
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 30px 10px;
-    }
-
-    @media (max-width: 800px) {
-      .message-board {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  </style>
+type="image/jpeg"
+href="IMG_20260121_185335.jpg">
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfilePage",
+  "mainEntity":{
+    "@type":"Person",
+    "name":"Yuwakshan",
+    "url":"https://yuwakshan.github.io/",
+    "image":"https://yuwakshan.github.io/IMG_20260121_185335.jpg",
+    "sameAs":[
+      "https://www.instagram.com/yuwakshan",
+      "https://t.me/Yuwakshan",
+      "https://github.com/Yuwakshan",
+      "https://www.facebook.com/share/1DUMgbSXtg/Fb",
+      "https://www.youtube.com/@withmyuniverse-m3p",
+      "https://www.tiktok.com/@universe0318",
+      "https://x.com/Yuwakshan"
+    ]
+  }
+}
+</script>
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:white;
+background:#070914;
+overflow-x:hidden;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-10;
+background:
+radial-gradient(circle at 10% 10%,rgba(0,247,255,.15),transparent 30%),
+radial-gradient(circle at 90% 20%,rgba(130,50,255,.18),transparent 30%),
+radial-gradient(circle at 50% 100%,rgba(255,0,170,.12),transparent 35%);
+animation:bgmove 12s infinite alternate;
+}
+
+@keyframes bgmove{
+from{transform:scale(1)}
+to{transform:scale(1.08)}
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button,
+input,
+textarea{
+font:inherit;
+}
+
+img{
+max-width:100%;
+}
+
+
+/* PARTICLES */
+
+.particles{
+position:fixed;
+inset:0;
+z-index:-2;
+pointer-events:none;
+overflow:hidden;
+}
+
+.particle{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+opacity:.5;
+animation:particle 12s linear infinite;
+}
+
+.particle:nth-child(1){left:10%;animation-duration:10s}
+.particle:nth-child(2){left:25%;animation-duration:14s}
+.particle:nth-child(3){left:40%;animation-duration:18s}
+.particle:nth-child(4){left:55%;animation-duration:12s}
+.particle:nth-child(5){left:70%;animation-duration:16s}
+.particle:nth-child(6){left:85%;animation-duration:20s}
+
+@keyframes particle{
+0%{top:110%;opacity:0}
+20%{opacity:.8}
+80%{opacity:.8}
+100%{top:-10%;opacity:0}
+}
+
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:18px;
+left:50%;
+transform:translateX(-50%);
+width:calc(100% - 30px);
+max-width:1200px;
+padding:14px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(255,255,255,.07);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:900;
+letter-spacing:3px;
+background:linear-gradient(90deg,#00f7ff,#8d5cff,#ff3dcc);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.nav-links{
+display:flex;
+gap:6px;
+list-style:none;
+}
+
+.nav-links a{
+padding:10px 14px;
+border-radius:12px;
+color:#bbb;
+transition:.3s;
+}
+
+.nav-links a:hover{
+background:rgba(255,255,255,.1);
+color:white;
+}
+
+.menu-btn{
+display:none;
+background:rgba(255,255,255,.1);
+color:white;
+border:0;
+font-size:23px;
+padding:8px 12px;
+border-radius:12px;
+}
+
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:140px 20px 80px;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.profile{
+width:180px;
+height:180px;
+padding:5px;
+margin:auto auto 30px;
+border-radius:50%;
+background:linear-gradient(135deg,#00f7ff,#7b2cff,#ff00c8);
+animation:float 5s ease-in-out infinite;
+}
+
+.profile img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #080b18;
+}
+
+@keyframes float{
+50%{transform:translateY(-12px)}
+}
+
+.badge{
+display:inline-block;
+padding:9px 16px;
+border-radius:30px;
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.14);
+color:#bbb;
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:clamp(55px,10vw,105px);
+font-weight:900;
+letter-spacing:-4px;
+background:linear-gradient(90deg,#fff,#00f7ff,#a77cff,#fff);
+background-size:250%;
+-webkit-background-clip:text;
+color:transparent;
+animation:gradient 5s linear infinite;
+}
+
+@keyframes gradient{
+to{background-position:250%}
+}
+
+.hero h2{
+font-size:clamp(20px,4vw,32px);
+margin-top:20px;
+}
+
+.hero h2 span{
+color:#00f7ff;
+}
+
+.typing{
+margin-top:14px;
+color:#aaa;
+font-size:18px;
+min-height:25px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.btn{
+padding:14px 22px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.08);
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.primary{
+border:0;
+background:linear-gradient(135deg,#00cfff,#744cff);
+}
+
+
+/* SECTIONS */
+
+.section{
+width:min(1150px,calc(100% - 35px));
+margin:auto;
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title span{
+color:#00f7ff;
+letter-spacing:4px;
+font-size:13px;
+}
+
+.section-title h2{
+font-size:clamp(35px,6vw,55px);
+margin-top:8px;
+}
+
+
+/* GLASS */
+
+.glass{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.13);
+backdrop-filter:blur(18px);
+border-radius:25px;
+}
+
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-img{
+overflow:hidden;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.15);
+}
+
+.about-img img{
+width:100%;
+display:block;
+transition:.6s;
+}
+
+.about-img:hover img{
+transform:scale(1.08);
+}
+
+.about-text{
+color:#bbb;
+font-size:17px;
+line-height:1.8;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:25px;
+}
+
+.info{
+padding:20px;
+}
+
+.info b{
+display:block;
+color:#00f7ff;
+margin-bottom:5px;
+}
+
+
+/* SOCIAL */
+
+.social-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+}
+
+.social{
+padding:25px 15px;
+text-align:center;
+transition:.3s;
+}
+
+.social:hover{
+transform:translateY(-7px);
+}
+
+.social-icon{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.social-name{
+font-weight:bold;
+}
+
+
+/* STORIES */
+
+.story-row{
+display:flex;
+gap:15px;
+overflow-x:auto;
+padding:10px 3px 20px;
+scrollbar-width:none;
+}
+
+.story-row::-webkit-scrollbar{
+display:none;
+}
+
+.story{
+min-width:100px;
+text-align:center;
+cursor:pointer;
+}
+
+.story-ring{
+width:85px;
+height:85px;
+padding:3px;
+border-radius:50%;
+background:linear-gradient(135deg,#00f7ff,#ff00c8,#7b2cff);
+margin:auto;
+}
+
+.story-ring img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #080914;
+}
+
+.story small{
+display:block;
+margin-top:7px;
+color:#bbb;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+
+/* UPDATES */
+
+.updates{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.update{
+overflow:hidden;
+}
+
+.update img{
+width:100%;
+max-height:350px;
+object-fit:cover;
+}
+
+.update-body{
+padding:22px;
+}
+
+.update-body h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.update-body p{
+color:#bbb;
+line-height:1.7;
+white-space:pre-wrap;
+}
+
+.date{
+font-size:12px;
+color:#777;
+margin-top:12px;
+display:block;
+}
+
+.reactions{
+display:flex;
+gap:7px;
+flex-wrap:wrap;
+margin-top:18px;
+}
+
+.react{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+color:white;
+padding:8px 11px;
+border-radius:20px;
+cursor:pointer;
+transition:.2s;
+}
+
+.react:hover{
+transform:scale(1.08);
+background:rgba(255,255,255,.15);
+}
+
+
+/* VIDEOS */
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+}
+
+.video{
+overflow:hidden;
+}
+
+.video iframe{
+width:100%;
+aspect-ratio:16/9;
+border:0;
+display:block;
+}
+
+.video-body{
+padding:18px;
+}
+
+.video-body h3{
+margin-bottom:7px;
+}
+
+.video-body p{
+color:#aaa;
+}
+
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.contact-box{
+padding:28px;
+}
+
+.contact-box h3{
+margin-bottom:15px;
+}
+
+.form{
+display:grid;
+gap:14px;
+}
+
+.form input,
+.form textarea{
+width:100%;
+padding:15px;
+border-radius:13px;
+border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.06);
+color:white;
+outline:none;
+}
+
+.form textarea{
+min-height:150px;
+resize:vertical;
+}
+
+.form input::placeholder,
+.form textarea::placeholder{
+color:#777;
+}
+
+.email-note{
+color:#888;
+font-size:13px;
+margin-top:12px;
+line-height:1.5;
+}
+
+
+/* ADMIN */
+
+.admin-panel{
+display:none;
+}
+
+.admin-panel.active{
+display:block;
+}
+
+.admin-login{
+max-width:500px;
+margin:auto;
+padding:30px;
+}
+
+.admin-dashboard{
+display:none;
+}
+
+.admin-dashboard.active{
+display:block;
+}
+
+.admin-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.admin-card{
+padding:25px;
+}
+
+.admin-card h3{
+margin-bottom:18px;
+}
+
+.admin-list{
+margin-top:25px;
+display:grid;
+gap:12px;
+}
+
+.admin-item{
+padding:15px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+border-radius:14px;
+display:flex;
+justify-content:space-between;
+gap:10px;
+align-items:center;
+}
+
+.delete-btn{
+background:#ff3158;
+border:0;
+color:white;
+padding:8px 12px;
+border-radius:9px;
+cursor:pointer;
+}
+
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:50px 20px;
+color:#777;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-name{
+color:#00f7ff;
+font-weight:bold;
+}
+
+
+/* SCROLL TOP */
+
+.scroll-top{
+position:fixed;
+right:20px;
+bottom:20px;
+width:45px;
+height:45px;
+border:0;
+border-radius:50%;
+background:linear-gradient(135deg,#00cfff,#744cff);
+color:white;
+cursor:pointer;
+display:none;
+z-index:999;
+}
+
+.scroll-top.show{
+display:block;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+right:0;
+padding:15px;
+flex-direction:column;
+background:rgba(10,12,25,.95);
+border-radius:18px;
+}
+
+.nav-links.open{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
+.about,
+.contact-grid,
+.admin-grid{
+grid-template-columns:1fr;
+}
+
+.social-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.updates,
+.video-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.hero h1{
+letter-spacing:-2px;
+}
+
+.profile{
+width:145px;
+height:145px;
+}
+
+.section{
+padding:75px 0;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.social-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.navbar{
+width:calc(100% - 20px);
+}
+
+}
+
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.8);
+z-index:3000;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.modal.active{
+display:flex;
+}
+
+.modal-box{
+max-width:500px;
+width:100%;
+padding:30px;
+position:relative;
+}
+
+.close{
+position:absolute;
+right:15px;
+top:10px;
+font-size:25px;
+cursor:pointer;
+color:#aaa;
+}
+
+
+/* STATUS */
+
+.status{
+padding:12px 15px;
+border-radius:12px;
+background:rgba(0,247,255,.07);
+border:1px solid rgba(0,247,255,.15);
+color:#aaa;
+margin-bottom:20px;
+font-size:13px;
+}
+
+</style>
 
 </head>
 
@@ -1933,1148 +846,1455 @@
 <body>
 
 
-  <!-- BACKGROUND -->
+<!-- PARTICLES -->
 
-  <div class="bg-blob blob1"></div>
-  <div class="bg-blob blob2"></div>
-  <div class="bg-blob blob3"></div>
+<div class="particles">
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+</div>
 
 
-  <div class="particles">
+<!-- NAVBAR -->
 
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+<nav class="navbar">
 
-  </div>
+<a href="#home" class="logo">YU</a>
 
+<ul class="nav-links" id="navLinks">
 
-  <!-- NAVBAR -->
+<li><a href="#home">Home</a></li>
 
-  <nav class="navbar">
+<li><a href="#about">About</a></li>
 
-    <a href="#home" class="logo">
-      YUWAKSHAN
-    </a>
+<li><a href="#social">Social</a></li>
 
+<li><a href="#updates">Updates</a></li>
 
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      aria-label="Open menu">
+<li><a href="#videos">Videos</a></li>
 
-      ☰
+<li><a href="#contact">Contact</a></li>
 
-    </button>
+</ul>
 
+<button class="menu-btn" id="menuBtn">☰</button>
 
-    <ul class="nav-links" id="navLinks">
+</nav>
 
-      <li>
-        <a href="#home">Home</a>
-      </li>
 
-      <li>
-        <a href="#about">About</a>
-      </li>
 
-      <li>
-        <a href="#social">Social</a>
-      </li>
+<!-- HERO -->
 
-      <li>
-        <a href="#public-messages">Messages</a>
-      </li>
+<section class="hero" id="home">
 
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
+<div class="hero-content">
 
-    </ul>
+<div class="profile">
 
-  </nav>
+<img src="IMG_20260121_185335.jpg"
+alt="Yuwakshan">
 
+</div>
 
+<div class="badge">
+Welcome to my personal website
+</div>
 
-  <!-- HERO -->
+<h1>Yuwakshan</h1>
 
-  <main>
+<h2>
+Physical Science Student
+<span>•</span> A/L 2028
+</h2>
 
-    <section id="home" class="hero">
+<div class="typing" id="typing"></div>
 
-      <div class="hero-content">
+<div class="buttons">
 
+<a href="#about" class="btn primary">
+Explore Website
+</a>
 
-        <div class="profile-wrapper">
+<a href="#contact" class="btn">
+Contact Me
+</a>
 
-          <img
-            src="IMG_20260121_185335.jpg"
-            alt="Yuwakshan">
+</div>
 
-        </div>
+</div>
 
+</section>
 
-        <div class="hero-small">
 
-          👋 Welcome To My Website
 
-        </div>
+<!-- ABOUT -->
 
+<section class="section" id="about">
 
-        <h1>
-          I'm Yuwakshan
-        </h1>
+<div class="section-title">
 
+<span>01</span>
 
-        <h2>
+<h2>About Me</h2>
 
-          Advanced Level Student
-          <br>
+</div>
 
-          <span>
-            Physical Science • 2028 Batch
-          </span>
 
-        </h2>
+<div class="about">
 
+<div class="about-img glass">
 
-        <div class="typing" id="typing"></div>
+<img src="IMG_20260121_185335.jpg"
+alt="Yuwakshan">
 
+</div>
 
-        <div class="hero-buttons">
 
-          <a
-            href="#about"
-            class="btn btn-primary">
+<div>
 
-            Explore Me ↓
+<p class="about-text">
 
-          </a>
+Hi! I'm <b>Yuwakshan</b>.
 
+I'm an Advanced Level Physical Science student from Sri Lanka, A/L 2028 batch.
 
-          <a
-            href="#social"
-            class="btn">
+This website is my personal online space where I can share my updates, projects, videos and social media.
 
-            Social Media
+</p>
 
-          </a>
 
-        </div>
+<div class="info-grid">
 
-      </div>
+<div class="info glass">
+<b>Education</b>
+Physical Science
+</div>
 
-    </section>
+<div class="info glass">
+<b>Batch</b>
+A/L 2028
+</div>
 
+<div class="info glass">
+<b>Country</b>
+Sri Lanka
+</div>
 
+<div class="info glass">
+<b>Website</b>
+Yuwakshan
+</div>
 
-    <!-- ABOUT -->
+</div>
 
-    <section
-      id="about"
-      class="section reveal">
+</div>
 
+</div>
 
-      <div class="section-title">
+</section>
 
-        <span>01</span>
 
-        <h2>About Me</h2>
 
-      </div>
+<!-- SOCIAL -->
 
+<section class="section" id="social">
 
-      <div class="about-container">
+<div class="section-title">
 
+<span>02</span>
 
-        <!-- IMAGE -->
+<h2>Social Media</h2>
 
-        <div
-          class="about-image-box"
-          id="aboutImageBox">
+</div>
 
 
-          <div class="image-glow"></div>
+<div class="social-grid">
 
 
-          <div class="about-image-card"
-               id="aboutImageCard">
+<a class="social glass"
+href="https://www.instagram.com/yuwakshan"
+target="_blank">
 
+<div class="social-icon">📸</div>
 
-            <img
-              src="IMG_20260121_185335.jpg"
-              alt="Yuwakshan">
+<div class="social-name">Instagram</div>
 
+</a>
 
-            <div class="image-overlay">
 
-              <h3>
-                YUWAKSHAN
-              </h3>
+<a class="social glass"
+href="https://wa.me/94789890427"
+target="_blank">
 
-              <p>
-                Physical Science • A/L 2028
-              </p>
+<div class="social-icon">💬</div>
 
-            </div>
+<div class="social-name">WhatsApp</div>
 
-          </div>
+</a>
 
-        </div>
 
+<a class="social glass"
+href="https://t.me/Yuwakshan"
+target="_blank">
 
-        <!-- TEXT -->
+<div class="social-icon">✈️</div>
 
-        <div class="about-text">
+<div class="social-name">Telegram</div>
 
+</a>
 
-          <h3>
 
-            Hi, I'm
-            <span>Yuwakshan</span>
-            👋
+<a class="social glass"
+href="https://www.facebook.com/share/1DUMgbSXtg/Fb"
+target="_blank">
 
-          </h3>
+<div class="social-icon">👥</div>
 
+<div class="social-name">Facebook</div>
 
-          <p>
+</a>
 
-            I'm an Advanced Level student
-            from Sri Lanka, currently following
-            the Physical Science stream in the
-            2028 A/L batch.
 
-          </p>
+<a class="social glass"
+href="https://x.com/Yuwakshan"
+target="_blank">
 
+<div class="social-icon">𝕏</div>
 
-          <p>
+<div class="social-name">X</div>
 
-            I'm interested in technology,
-            education, content creation and
-            learning new things.
+</a>
 
-          </p>
 
+<a class="social glass"
+href="https://www.tiktok.com/@universe0318"
+target="_blank">
 
-          <p>
+<div class="social-icon">🎵</div>
 
-            This website is my personal space
-            where I share my interests, projects,
-            social media and future updates.
+<div class="social-name">TikTok</div>
 
-          </p>
+</a>
 
 
-          <div class="info-grid">
+<a class="social glass"
+href="https://www.youtube.com/@withmyuniverse-m3p"
+target="_blank">
 
+<div class="social-icon">▶️</div>
 
-            <div class="info-card">
+<div class="social-name">YouTube</div>
 
-              <div class="info-icon">
-                🎓
-              </div>
+</a>
 
-              <div>
 
-                <h4>
-                  Education
-                </h4>
+<a class="social glass"
+href="https://github.com/Yuwakshan"
+target="_blank">
 
-                <p>
-                  Advanced Level Student
-                </p>
+<div class="social-icon">💻</div>
 
-              </div>
+<div class="social-name">GitHub</div>
 
-            </div>
+</a>
 
 
-            <div class="info-card">
+</div>
 
-              <div class="info-icon">
-                📚
-              </div>
+</section>
 
-              <div>
 
-                <h4>
-                  Stream
-                </h4>
 
-                <p>
-                  Physical Science
-                </p>
+<!-- UPDATES -->
 
-              </div>
+<section class="section" id="updates">
 
-            </div>
+<div class="section-title">
 
+<span>03</span>
 
-            <div class="info-card">
+<h2>Daily Updates</h2>
 
-              <div class="info-icon">
-                📅
-              </div>
+</div>
 
-              <div>
 
-                <h4>
-                  A/L Batch
-                </h4>
+<div id="firebaseStatus" class="status">
 
-                <p>
-                  2028 Batch
-                </p>
+Loading updates...
 
-              </div>
+</div>
 
-            </div>
 
+<!-- STORY STYLE -->
 
-            <div class="info-card">
+<div id="storyRow" class="story-row"></div>
 
-              <div class="info-icon">
-                💻
-              </div>
 
-              <div>
+<!-- POSTS -->
 
-                <h4>
-                  Interests
-                </h4>
+<div id="updatesGrid" class="updates"></div>
 
-                <p>
-                  Technology • Learning
-                </p>
+</section>
 
-              </div>
 
-            </div>
 
+<!-- VIDEOS -->
 
-          </div>
+<section class="section" id="videos">
 
-        </div>
+<div class="section-title">
 
-      </div>
+<span>04</span>
 
-    </section>
+<h2>My Videos</h2>
 
+</div>
 
 
-    <!-- SOCIAL -->
+<div id="videoGrid" class="video-grid">
 
-    <section
-      id="social"
-      class="section reveal">
+<div class="contact-box glass">
 
+<p>No videos added yet.</p>
 
-      <div class="section-title">
+</div>
 
-        <span>02</span>
+</div>
 
-        <h2>Social Media</h2>
+</section>
 
-      </div>
 
 
-      <div class="social-grid">
+<!-- CONTACT -->
 
+<section class="section" id="contact">
 
-        <a
-          href="https://www.instagram.com/yuwakshan"
-          target="_blank"
-          class="social-card">
+<div class="section-title">
 
-          <div class="social-icon">
-            📸
-          </div>
+<span>05</span>
 
-          <div>
+<h2>Contact Me</h2>
 
-            <h3>
-              Instagram
-            </h3>
+</div>
 
-            <p>
-              @yuwakshan
-            </p>
 
-          </div>
+<div class="contact-grid">
 
-          <span>
-            ↗
-          </span>
 
-        </a>
+<div class="contact-box glass">
 
+<h3>Send Me an Email ✉️</h3>
 
+<form id="emailForm" class="form">
 
-        <a
-          href="https://wa.me/94789890427"
-          target="_blank"
-          class="social-card">
+<input
+id="visitorName"
+type="text"
+placeholder="Your Name"
+maxlength="60"
+required>
 
-          <div class="social-icon">
-            💬
-          </div>
+<input
+id="visitorEmail"
+type="email"
+placeholder="Your Email"
+required>
 
-          <div>
+<textarea
+id="visitorMessage"
+placeholder="Write your message..."
+maxlength="1000"
+required></textarea>
 
-            <h3>
-              WhatsApp
-            </h3>
+<button
+type="submit"
+class="btn primary">
 
-            <p>
-              Chat with me
-            </p>
+✉️ Send Email
 
-          </div>
+</button>
 
-          <span>
-            ↗
-          </span>
+</form>
 
-        </a>
 
+<p class="email-note">
 
+When you click Send Email, your email app/Gmail will open with the message prepared. You need to press Send.
 
-        <a
-          href="https://t.me/Yuwakshan"
-          target="_blank"
-          class="social-card">
+</p>
 
-          <div class="social-icon">
-            ✈️
-          </div>
+</div>
 
-          <div>
 
-            <h3>
-              Telegram
-            </h3>
 
-            <p>
-              @Yuwakshan
-            </p>
+<div class="contact-box glass">
 
-          </div>
+<h3>Connect With Me</h3>
 
-          <span>
-            ↗
-          </span>
+<div class="buttons"
+style="justify-content:flex-start">
 
-        </a>
+<a class="btn"
+href="https://wa.me/94789890427"
+target="_blank">
 
+💬 WhatsApp
 
+</a>
 
-        <a
-          href="https://github.com/Yuwakshan"
-          target="_blank"
-          class="social-card">
+<a class="btn"
+href="mailto:yuwakshans@gmail.com">
 
-          <div class="social-icon">
-            💻
-          </div>
+✉️ Email
 
-          <div>
+</a>
 
-            <h3>
-              GitHub
-            </h3>
+<a class="btn"
+href="https://t.me/Yuwakshan"
+target="_blank">
 
-            <p>
-              @Yuwakshan
-            </p>
+✈️ Telegram
 
-          </div>
+</a>
 
-          <span>
-            ↗
-          </span>
+</div>
 
-        </a>
+</div>
 
 
+</div>
 
-        <a
-          href="https://www.facebook.com/share/1DUMgbSXtg/Fb"
-          target="_blank"
-          class="social-card">
+</section>
 
-          <div class="social-icon">
-            f
-          </div>
 
-          <div>
 
-            <h3>
-              Facebook
-            </h3>
+<!-- ADMIN -->
 
-            <p>
-              My Facebook
-            </p>
+<section class="section admin-panel" id="admin">
 
-          </div>
+<div class="section-title">
 
-          <span>
-            ↗
-          </span>
+<span>ADMIN</span>
 
-        </a>
+<h2>Admin Dashboard</h2>
 
+</div>
 
 
-        <a
-          href="https://www.youtube.com/@withmyuniverse-m3p"
-          target="_blank"
-          class="social-card">
+<div id="adminLogin" class="admin-login glass">
 
-          <div class="social-icon">
-            ▶
-          </div>
+<h3>Admin Login 🔐</h3>
 
-          <div>
+<br>
 
-            <h3>
-              YouTube
-            </h3>
+<form id="loginForm" class="form">
 
-            <p>
-              My Channel
-            </p>
+<input
+id="adminEmail"
+type="email"
+placeholder="Admin Email"
+required>
 
-          </div>
+<input
+id="adminPassword"
+type="password"
+placeholder="Password"
+required>
 
-          <span>
-            ↗
-          </span>
+<button class="btn primary">
+Login
+</button>
 
-        </a>
+</form>
 
+<p id="loginStatus"
+class="email-note"></p>
 
+</div>
 
-        <a
-          href="https://www.tiktok.com/@universe0318?_r=1&_t=ZS-9A8hhVDNdGW"
-          target="_blank"
-          class="social-card">
 
-          <div class="social-icon">
-            ♪
-          </div>
 
-          <div>
+<div id="adminDashboard"
+class="admin-dashboard">
 
-            <h3>
-              TikTok
-            </h3>
 
-            <p>
-              My TikTok
-            </p>
+<div class="admin-grid">
 
-          </div>
 
-          <span>
-            ↗
-          </span>
+<!-- UPDATE ADD -->
 
-        </a>
+<div class="admin-card glass">
 
+<h3>➕ Add Daily Update</h3>
 
+<form id="updateForm" class="form">
 
-        <a
-          href="https://x.com/Yuwakshan"
-          target="_blank"
-          class="social-card">
+<input
+id="updateTitle"
+placeholder="Update Title"
+maxlength="100"
+required>
 
-          <div class="social-icon">
-            𝕏
-          </div>
+<textarea
+id="updateText"
+placeholder="Write your update..."
+required></textarea>
 
-          <div>
+<input
+id="updateImage"
+placeholder="Image URL (optional)">
 
-            <h3>
-              X
-            </h3>
+<button class="btn primary">
+Publish Update
+</button>
 
-            <p>
-              @Yuwakshan
-            </p>
+</form>
 
-          </div>
+</div>
 
-          <span>
-            ↗
-          </span>
 
-        </a>
 
+<!-- VIDEO ADD -->
 
-      </div>
+<div class="admin-card glass">
 
-    </section>
+<h3>▶️ Add YouTube Video</h3>
 
+<form id="videoForm" class="form">
 
+<input
+id="videoTitle"
+placeholder="Video Title"
+required>
 
-    <!-- PUBLIC MESSAGES -->
+<input
+id="videoUrl"
+placeholder="YouTube URL"
+required>
 
-  <section id="public-messages" class="section reveal">
+<textarea
+id="videoDescription"
+placeholder="Video description"></textarea>
 
-    <div class="section-title">
-      <span>03</span>
-      <h2>Public Messages</h2>
-    </div>
+<button class="btn primary">
+Publish Video
+</button>
 
-    <div class="message-board">
-      <div class="message-form-card">
-        <h3>💬 Send Me a Message</h3>
-        <p class="message-note">Your message will stay private until Yuwakshan approves it.</p>
+</form>
 
-        <form id="messageForm">
-          <input id="messageName" type="text" maxlength="40" placeholder="Your name" required>
-          <textarea id="messageText" maxlength="300" rows="5" placeholder="Write your message..." required></textarea>
-          <button class="btn btn-primary" type="submit">Send Message 🚀</button>
-        </form>
-        <p id="messageStatus" class="message-status"></p>
-      </div>
+</div>
 
-      <div class="public-list-card">
-        <h3>✨ Approved Messages</h3>
-        <div id="approvedMessages" class="approved-messages">
-          <p class="empty-messages">No approved messages yet.</p>
-        </div>
-      </div>
-    </div>
 
-  </section>
+</div>
 
 
-  <!-- CONTACT -->
+<div class="admin-card glass"
+style="margin-top:20px">
 
-    <section
-      id="contact"
-      class="section reveal">
+<h3>Published Content</h3>
 
+<div id="adminList"
+class="admin-list">
 
-      <div class="section-title">
+</div>
 
-        <span>03</span>
+</div>
 
-        <h2>Contact Me</h2>
 
-      </div>
+<button
+id="logoutBtn"
+class="btn"
+style="margin-top:20px">
 
+Logout
 
-      <div class="contact-box">
+</button>
 
 
-        <h3>
-          Let's Connect 🤝
-        </h3>
+</div>
 
+</section>
 
-        <p>
 
-          Feel free to connect with me
-          through my social media platforms.
 
-        </p>
+<!-- FOOTER -->
 
+<footer>
 
-        <div class="contact-buttons">
+<p>
 
+© <span id="year"></span>
 
-          <a
-            href="https://wa.me/94789890427"
-            target="_blank"
-            class="contact-btn">
+<span class="footer-name">
+Yuwakshan
+</span>
 
-            💬 WhatsApp
+</p>
 
-          </a>
+<p style="margin-top:8px">
 
+Personal Website
 
-          <a
-            href="mailto:yuwakshans@gmail.com"
-            class="contact-btn">
+</p>
 
-            ✉️ Email
+</footer>
 
-          </a>
 
 
-          <a
-            href="https://t.me/Yuwakshan"
-            target="_blank"
-            class="contact-btn">
+<!-- SCROLL -->
 
-            ✈️ Telegram
+<button
+class="scroll-top"
+id="scrollTop">
 
-          </a>
+↑
 
+</button>
 
-        </div>
 
-      </div>
 
-    </section>
+<!-- STORY MODAL -->
 
-  </main>
+<div class="modal" id="storyModal">
 
+<div class="modal-box glass">
 
+<span class="close"
+id="closeModal">
+×
+</span>
 
-  <!-- FOOTER -->
+<img
+id="modalImage"
+style="width:100%;border-radius:15px">
 
-  <footer>
+<h3 id="modalTitle"
+style="margin-top:15px">
 
-    <h2>
-      YUWAKSHAN
-    </h2>
+</h3>
 
+<p id="modalText"
+style="margin-top:10px;color:#bbb;line-height:1.7">
 
-    <p>
+</p>
 
-      Advanced Level Student
-      • Physical Science
-      • 2028 Batch
+</div>
 
-    </p>
+</div>
 
 
-    <div class="footer-socials">
 
-      <a
-        href="https://www.instagram.com/yuwakshan"
-        target="_blank">
+<script>
 
-        Instagram
 
-      </a>
+// NAV MENU
 
+const menuBtn =
+document.getElementById("menuBtn");
 
-      <a
-        href="https://wa.me/94789890427"
-        target="_blank">
+const navLinks =
+document.getElementById("navLinks");
 
-        WhatsApp
+menuBtn.addEventListener("click",()=>{
 
-      </a>
+navLinks.classList.toggle("open");
 
+});
 
-      <a
-        href="https://t.me/Yuwakshan"
-        target="_blank">
+document.querySelectorAll(".nav-links a")
+.forEach(link=>{
 
-        Telegram
+link.addEventListener("click",()=>{
 
-      </a>
+navLinks.classList.remove("open");
 
+});
 
-      <a
-        href="https://github.com/Yuwakshan"
-        target="_blank">
+});
 
-        GitHub
 
-      </a>
+// TYPING
 
-    </div>
+const typing =
+document.getElementById("typing");
 
+const words = [
+"Welcome to my website.",
+"Physical Science Student.",
+"A/L 2028 Batch.",
+"Sharing my daily updates.",
+"Sharing my YouTube videos."
+];
 
-    <p class="copyright">
+let wi=0;
+let ci=0;
+let deleting=false;
 
-      © 2026 Yuwakshan.
-      All Rights Reserved.
+function type(){
 
-    </p>
+const word=words[wi];
 
-  </footer>
+if(!deleting){
 
+typing.textContent =
+word.substring(0,ci+1);
 
+ci++;
 
-  <!-- SCROLL TOP -->
+if(ci===word.length){
 
-  <button id="scrollTop">
-    ↑
-  </button>
+deleting=true;
 
+setTimeout(type,1200);
 
+return;
 
-  <script>
+}
 
+}else{
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+typing.textContent =
+word.substring(0,ci-1);
 
-    const menuBtn =
-      document.getElementById("menuBtn");
+ci--;
 
-    const navLinks =
-      document.getElementById("navLinks");
+if(ci===0){
 
+deleting=false;
 
-    menuBtn.addEventListener(
-      "click",
-      () => {
+wi=(wi+1)%words.length;
 
-        navLinks.classList.toggle("active");
+}
 
-      }
-    );
+}
 
+setTimeout(
+type,
+deleting?50:85
+);
 
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach(link => {
+}
 
-        link.addEventListener(
-          "click",
-          () => {
+type();
 
-            navLinks.classList.remove("active");
 
-          }
-        );
+// YEAR
 
-      });
+document.getElementById("year")
+.textContent =
+new Date().getFullYear();
 
 
+// EMAIL
 
-    /* =========================
-       TYPING EFFECT
-    ========================= */
+document.getElementById("emailForm")
+.addEventListener("submit",function(e){
 
-    const typing =
-      document.getElementById("typing");
+e.preventDefault();
 
+const name =
+document.getElementById("visitorName")
+.value.trim();
 
-    const words = [
+const email =
+document.getElementById("visitorEmail")
+.value.trim();
 
-      "Student",
-      "Learner",
-      "Creator",
-      "Technology Enthusiast",
-      "Future Developer"
+const message =
+document.getElementById("visitorMessage")
+.value.trim();
 
-    ];
+const subject =
+"Website Message from "+name;
 
+const body =
+"Name: "+name+
+"\nEmail: "+email+
+"\n\nMessage:\n"+message;
 
-    let wordIndex = 0;
+const mail =
+"mailto:yuwakshans@gmail.com"+
+"?subject="+
+encodeURIComponent(subject)+
+"&body="+
+encodeURIComponent(body);
 
-    let charIndex = 0;
+window.location.href=mail;
 
-    let deleting = false;
+});
 
 
-    function typeEffect() {
+// SCROLL TOP
 
-      const word =
-        words[wordIndex];
+const scrollTop =
+document.getElementById("scrollTop");
 
+window.addEventListener("scroll",()=>{
 
-      if (!deleting) {
+if(window.scrollY>500){
 
-        typing.textContent =
-          word.substring(
-            0,
-            charIndex + 1
-          );
+scrollTop.classList.add("show");
 
-        charIndex++;
+}else{
 
+scrollTop.classList.remove("show");
 
-        if (
-          charIndex ===
-          word.length
-        ) {
+}
 
-          deleting = true;
+});
 
-          setTimeout(
-            typeEffect,
-            1200
-          );
+scrollTop.onclick=()=>{
 
-          return;
-        }
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
-      } else {
+};
 
-        typing.textContent =
-          word.substring(
-            0,
-            charIndex - 1
-          );
 
-        charIndex--;
+// LOCAL DEMO DATA
 
+let updates =
+JSON.parse(
+localStorage.getItem("yuwakshanUpdates")
+||"[]"
+);
 
-        if (charIndex === 0) {
+let videos =
+JSON.parse(
+localStorage.getItem("yuwakshanVideos")
+||"[]"
+);
 
-          deleting = false;
 
-          wordIndex =
-            (wordIndex + 1)
-            % words.length;
+function saveData(){
 
-        }
+localStorage.setItem(
+"yuwakshanUpdates",
+JSON.stringify(updates)
+);
 
-      }
+localStorage.setItem(
+"yuwakshanVideos",
+JSON.stringify(videos)
+);
 
+}
 
-      setTimeout(
-        typeEffect,
-        deleting ? 55 : 90
-      );
 
-    }
+function escapeHTML(text){
 
+return String(text)
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
 
-    typeEffect();
+}
 
 
+// YOUTUBE ID
 
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
+function getYoutubeId(url){
 
-    const reveals =
-      document.querySelectorAll(
-        ".reveal"
-      );
+const match =
+url.match(
+/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([^&?/]+)/
+);
 
+return match ? match[1] : "";
 
-    const observer =
-      new IntersectionObserver(
-        (entries) => {
+}
 
-          entries.forEach(
-            entry => {
 
-              if (
-                entry.isIntersecting
-              ) {
+// RENDER UPDATES
 
-                entry.target
-                  .classList
-                  .add("active");
+function renderUpdates(){
 
-              }
+const grid =
+document.getElementById("updatesGrid");
 
-            }
-          );
+const story =
+document.getElementById("storyRow");
 
-        },
-        {
-          threshold: 0.12
-        }
-      );
+if(updates.length===0){
 
+grid.innerHTML=`
 
-    reveals.forEach(
-      element =>
-        observer.observe(element)
-    );
+<div class="contact-box glass">
 
+<p>No daily updates yet.</p>
 
+</div>
 
-    /* =========================
-       SCROLL TOP
-    ========================= */
+`;
 
-    const scrollTop =
-      document.getElementById(
-        "scrollTop"
-      );
+story.innerHTML="";
 
+return;
 
-    window.addEventListener(
-      "scroll",
-      () => {
+}
 
-        if (
-          window.scrollY > 450
-        ) {
 
-          scrollTop
-            .classList
-            .add("show");
+updates.sort(
+(a,b)=>b.time-a.time
+);
 
-        } else {
 
-          scrollTop
-            .classList
-            .remove("show");
+story.innerHTML =
+updates.map(item=>`
 
-        }
+<div
+class="story"
+onclick="openStory('${item.id}')">
 
-      }
-    );
+<div class="story-ring">
 
+<img
+src="${escapeHTML(
+item.image ||
+"IMG_20260121_185335.jpg"
+)}">
 
-    scrollTop.addEventListener(
-      "click",
-      () => {
+</div>
 
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
+<small>
+${escapeHTML(item.title)}
+</small>
 
-      }
-    );
+</div>
 
+`).join("");
 
 
-    /* =========================
-       3D IMAGE MOUSE EFFECT
-    ========================= */
+grid.innerHTML =
+updates.map(item=>{
 
-    const imageBox =
-      document.getElementById(
-        "aboutImageBox"
-      );
+const reactions =
+item.reactions ||
+{
+"❤️":0,
+"🔥":0,
+"👍":0,
+"😂":0,
+"😮":0
+};
 
-    const imageCard =
-      document.getElementById(
-        "aboutImageCard"
-      );
+return `
 
+<article class="update glass">
 
-    if (imageBox && imageCard) {
+${
+item.image
+?
+`<img
+src="${escapeHTML(item.image)}"
+alt="${escapeHTML(item.title)}">`
+:""
+}
 
-      imageBox.addEventListener(
-        "mousemove",
-        (event) => {
+<div class="update-body">
 
-          const rect =
-            imageBox.getBoundingClientRect();
+<h3>
+${escapeHTML(item.title)}
+</h3>
 
+<p>
+${escapeHTML(item.text)}
+</p>
 
-          const x =
-            event.clientX -
-            rect.left;
+<span class="date">
+${new Date(item.time).toLocaleString()}
+</span>
 
+<div class="reactions">
 
-          const y =
-            event.clientY -
-            rect.top;
+${["❤️","🔥","👍","😂","😮"]
+.map(emoji=>`
 
+<button
+class="react"
+onclick="react('${item.id}','${emoji}')">
 
-          const centerX =
-            rect.width / 2;
+${emoji}
+<span>
+${reactions[emoji]||0}
+</span>
 
+</button>
 
-          const centerY =
-            rect.height / 2;
+`).join("")}
 
+</div>
 
-          const rotateY =
-            ((x - centerX) /
-              centerX) * 6;
+</div>
 
+</article>
 
-          const rotateX =
-            ((centerY - y) /
-              centerY) * 6;
+`;
 
+}).join("");
 
-          imageCard.style.transform =
-            `
-            scale(1.07)
-            translateY(-12px)
-            rotateX(${rotateX}deg)
-            rotateY(${rotateY}deg)
-            `;
+}
 
-        }
-      );
 
+function renderVideos(){
 
-      imageBox.addEventListener(
-        "mouseleave",
-        () => {
+const grid =
+document.getElementById("videoGrid");
 
-          imageCard.style.transform =
-            "";
+if(videos.length===0){
 
-        }
-      );
+grid.innerHTML=`
 
-    }
+<div class="contact-box glass">
 
+<p>No videos added yet.</p>
 
-  </script>
+</div>
 
+`;
 
+return;
 
-  <!-- PUBLIC MESSAGE DEMO STORAGE -->
-  <script>
-    /*
-      IMPORTANT:
-      This front-end version stores messages in localStorage only.
-      For real public messages + private admin approval across devices,
-      connect this section to Firebase/Supabase with authentication.
-    */
-    const messageForm = document.getElementById("messageForm");
-    const messageName = document.getElementById("messageName");
-    const messageText = document.getElementById("messageText");
-    const messageStatus = document.getElementById("messageStatus");
-    const approvedMessages = document.getElementById("approvedMessages");
+}
 
-    function escapeHTML(value) {
-      return value.replace(/[&<>"']/g, c => ({
-        "&":"&amp;", "<":"&lt;", ">":"&gt;",
-        '"':"&quot;", "'":"&#039;"
-      }[c]));
-    }
+grid.innerHTML =
+videos.map(item=>{
 
-    function getApprovedMessages() {
-      try {
-        return JSON.parse(localStorage.getItem("yuwakshanApprovedMessages") || "[]");
-      } catch { return []; }
-    }
+const id =
+getYoutubeId(item.url);
 
-    function renderApprovedMessages() {
-      const messages = getApprovedMessages();
-      if (!messages.length) {
-        approvedMessages.innerHTML = '<p class="empty-messages">No approved messages yet.</p>';
-        return;
-      }
-      approvedMessages.innerHTML = messages.map(m => `
-        <article class="public-message">
-          <strong>👤 ${escapeHTML(m.name)}</strong>
-          <p>${escapeHTML(m.text)}</p>
-        </article>
-      `).join("");
-    }
+if(!id)return "";
 
-    if (messageForm) {
-      messageForm.addEventListener("submit", event => {
-        event.preventDefault();
-        const name = messageName.value.trim();
-        const text = messageText.value.trim();
-        if (!name || !text) return;
+return `
 
-        /* Pending messages are NOT added to the public list. */
-        const pending = JSON.parse(localStorage.getItem("yuwakshanPendingMessages") || "[]");
-        pending.push({ name, text, createdAt: Date.now(), approved: false });
-        localStorage.setItem("yuwakshanPendingMessages", JSON.stringify(pending));
+<article class="video glass">
 
-        messageForm.reset();
-        messageStatus.textContent = "Message sent for approval. Thank you! ✓";
-      });
-    }
+<iframe
+src="https://www.youtube.com/embed/${id}"
+title="${escapeHTML(item.title)}"
+allowfullscreen>
+</iframe>
 
-    renderApprovedMessages();
-  </script>
+<div class="video-body">
+
+<h3>
+${escapeHTML(item.title)}
+</h3>
+
+<p>
+${escapeHTML(item.description||"")}
+</p>
+
+</div>
+
+</article>
+
+`;
+
+}).join("");
+
+}
+
+
+// REACTION
+
+function react(id,emoji){
+
+const item =
+updates.find(x=>x.id===id);
+
+if(!item)return;
+
+const key =
+"reaction_"+id;
+
+let reacted =
+JSON.parse(
+localStorage.getItem(key)||"[]"
+);
+
+if(reacted.includes(emoji)){
+
+return;
+
+}
+
+if(!item.reactions){
+
+item.reactions={
+"❤️":0,
+"🔥":0,
+"👍":0,
+"😂":0,
+"😮":0
+};
+
+}
+
+item.reactions[emoji]++;
+
+reacted.push(emoji);
+
+localStorage.setItem(
+key,
+JSON.stringify(reacted)
+);
+
+saveData();
+
+renderUpdates();
+
+}
+
+
+// STORY MODAL
+
+function openStory(id){
+
+const item =
+updates.find(x=>x.id===id);
+
+if(!item)return;
+
+document.getElementById("modalImage")
+.src =
+item.image ||
+"IMG_20260121_185335.jpg";
+
+document.getElementById("modalTitle")
+.textContent =
+item.title;
+
+document.getElementById("modalText")
+.textContent =
+item.text;
+
+document.getElementById("storyModal")
+.classList.add("active");
+
+}
+
+
+document.getElementById("closeModal")
+.onclick=()=>{
+
+document.getElementById("storyModal")
+.classList.remove("active");
+
+};
+
+
+// ADMIN ACCESS
+
+// Change this PIN before using it.
+// For real security use Firebase Authentication.
+
+const ADMIN_PIN="YUWAKSHAN2028";
+
+
+// Secret admin URL:
+// https://yuwakshan.github.io/#admin
+
+function showAdmin(){
+
+document.getElementById("admin")
+.classList.add("active");
+
+document.getElementById("admin")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+if(location.hash==="#admin"){
+
+showAdmin();
+
+}
+
+
+// ADMIN LOGIN
+
+document.getElementById("loginForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const email =
+document.getElementById("adminEmail")
+.value.trim();
+
+const password =
+document.getElementById("adminPassword")
+.value;
+
+if(
+email==="yuwakshans@gmail.com"
+&&
+password===ADMIN_PIN
+){
+
+document.getElementById("adminLogin")
+.style.display="none";
+
+document.getElementById("adminDashboard")
+.classList.add("active");
+
+document.getElementById("loginStatus")
+.textContent="";
+
+renderAdmin();
+
+}else{
+
+document.getElementById("loginStatus")
+.textContent=
+"Incorrect admin login.";
+
+}
+
+});
+
+
+// ADD UPDATE
+
+document.getElementById("updateForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const item={
+
+id:
+Date.now().toString(),
+
+title:
+document.getElementById("updateTitle")
+.value.trim(),
+
+text:
+document.getElementById("updateText")
+.value.trim(),
+
+image:
+document.getElementById("updateImage")
+.value.trim(),
+
+time:
+Date.now(),
+
+reactions:{
+"❤️":0,
+"🔥":0,
+"👍":0,
+"😂":0,
+"😮":0
+}
+
+};
+
+updates.unshift(item);
+
+saveData();
+
+renderUpdates();
+
+renderAdmin();
+
+this.reset();
+
+alert("Update published!");
+
+});
+
+
+// ADD VIDEO
+
+document.getElementById("videoForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const item={
+
+id:
+Date.now().toString(),
+
+title:
+document.getElementById("videoTitle")
+.value.trim(),
+
+url:
+document.getElementById("videoUrl")
+.value.trim(),
+
+description:
+document.getElementById("videoDescription")
+.value.trim(),
+
+time:
+Date.now()
+
+};
+
+if(!getYoutubeId(item.url)){
+
+alert("Please enter a valid YouTube URL.");
+
+return;
+
+}
+
+videos.unshift(item);
+
+saveData();
+
+renderVideos();
+
+renderAdmin();
+
+this.reset();
+
+alert("YouTube video added!");
+
+});
+
+
+// ADMIN LIST
+
+function renderAdmin(){
+
+const list =
+document.getElementById("adminList");
+
+let html="";
+
+updates.forEach(item=>{
+
+html+=`
+
+<div class="admin-item">
+
+<span>
+📰 ${escapeHTML(item.title)}
+</span>
+
+<button
+class="delete-btn"
+onclick="deleteUpdate('${item.id}')">
+
+Delete
+
+</button>
+
+</div>
+
+`;
+
+});
+
+videos.forEach(item=>{
+
+html+=`
+
+<div class="admin-item">
+
+<span>
+▶️ ${escapeHTML(item.title)}
+</span>
+
+<button
+class="delete-btn"
+onclick="deleteVideo('${item.id}')">
+
+Delete
+
+</button>
+
+</div>
+
+`;
+
+});
+
+if(!html){
+
+html="<p style='color:#777'>No content yet.</p>";
+
+}
+
+list.innerHTML=html;
+
+}
+
+
+// DELETE UPDATE
+
+function deleteUpdate(id){
+
+if(!confirm("Delete this update?"))return;
+
+updates =
+updates.filter(x=>x.id!==id);
+
+saveData();
+
+renderUpdates();
+
+renderAdmin();
+
+}
+
+
+// DELETE VIDEO
+
+function deleteVideo(id){
+
+if(!confirm("Delete this video?"))return;
+
+videos =
+videos.filter(x=>x.id!==id);
+
+saveData();
+
+renderVideos();
+
+renderAdmin();
+
+}
+
+
+// LOGOUT
+
+document.getElementById("logoutBtn")
+.onclick=()=>{
+
+document.getElementById("adminDashboard")
+.classList.remove("active");
+
+document.getElementById("adminLogin")
+.style.display="block";
+
+};
+
+
+// INITIAL
+
+renderUpdates();
+
+renderVideos();
+
+</script>
+
 
 </body>
-
 </html>
