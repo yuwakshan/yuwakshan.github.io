@@ -1,33 +1,717 @@
-<div class="social-links">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <a href="YOUR_INSTAGRAM_LINK" target="_blank" class="social-btn instagram">
-    Instagram
-  </a>
+  <meta name="google-site-verification"
+        content="O3h0UmiOyKvFsGiKP3uJWnzc-irtKVEqD9LneReM8RU">
 
-  <a href="YOUR_WHATSAPP_LINK" target="_blank" class="social-btn whatsapp">
-    WhatsApp
-  </a>
+  <title>Yuwakshan Sivakumar | Personal Website</title>
 
-  <a href="YOUR_FACEBOOK_LINK" target="_blank" class="social-btn facebook">
-    Facebook
-  </a>
+  <style>
 
-  <a href="YOUR_X_LINK" target="_blank" class="social-btn x">
-    X
-  </a>
+    /* =========================
+       BASIC RESET
+    ========================= */
 
-  <a href="YOUR_SNAPCHAT_LINK" target="_blank" class="social-btn snapchat">
-    Snapchat
-  </a>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-  <!-- Add more social media here -->
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <a href="YOUR_TELEGRAM_LINK" target="_blank" class="social-btn telegram">
-    Telegram
-  </a>
+    body {
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
 
-  <a href="YOUR_YOUTUBE_LINK" target="_blank" class="social-btn youtube">
-    YouTube
-  </a>
+      /* Animated Background */
+      background: linear-gradient(
+        -45deg,
+        #020617,
+        #0f172a,
+        #172554,
+        #111827,
+        #020617
+      );
 
-</div>
+      background-size: 400% 400%;
+
+      animation: backgroundMove 12s ease infinite;
+    }
+
+
+    /* =========================
+       BACKGROUND ANIMATION
+    ========================= */
+
+    @keyframes backgroundMove {
+
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+
+    }
+
+
+    /* =========================
+       FLOATING LIGHTS
+    ========================= */
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    body::before {
+      background: #38bdf8;
+      top: 10%;
+      left: -80px;
+      animation: floatingLight 8s ease-in-out infinite;
+    }
+
+    body::after {
+      background: #8b5cf6;
+      bottom: 5%;
+      right: -80px;
+      animation: floatingLight 10s ease-in-out infinite reverse;
+    }
+
+    @keyframes floatingLight {
+
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(80px, 50px);
+      }
+
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: rgba(15, 23, 42, 0.75);
+
+      backdrop-filter: blur(10px);
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav h2 {
+      color: #38bdf8;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 90vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 60px 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+
+      animation: heroAppear 1.5s ease;
+    }
+
+    @keyframes heroAppear {
+
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       PROFILE IMAGE
+    ========================= */
+
+    .profile-img {
+      width: 90px;
+      height: 90px;
+
+      object-fit: cover;
+
+      border-radius: 15px;
+
+      border: 3px solid #38bdf8;
+
+      display: block;
+
+      margin: 20px auto;
+
+      box-shadow:
+        0 0 15px rgba(56,189,248,0.5);
+
+      animation: profileZoom 3s ease-in-out infinite;
+    }
+
+    @keyframes profileZoom {
+
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+      }
+
+    }
+
+
+    /* =========================
+       MAIN BUTTON
+    ========================= */
+
+    .btn {
+      display: inline-block;
+
+      padding: 13px 28px;
+
+      background: #38bdf8;
+
+      color: #0f172a;
+
+      text-decoration: none;
+
+      border-radius: 30px;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+
+      box-shadow:
+        0 0 15px rgba(56,189,248,0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-5px) scale(1.05);
+
+      box-shadow:
+        0 0 30px rgba(56,189,248,0.8);
+    }
+
+
+    /* =========================
+       SOCIAL MEDIA
+    ========================= */
+
+    .social-section {
+      padding: 50px 20px;
+
+      text-align: center;
+    }
+
+    .social-section h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .social-section p {
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+
+    .social-links {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 15px;
+
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+
+    .social-btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-width: 130px;
+
+      padding: 13px 20px;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      color: white;
+
+      font-weight: bold;
+
+      border: 1px solid rgba(255,255,255,0.2);
+
+      background: rgba(255,255,255,0.08);
+
+      backdrop-filter: blur(10px);
+
+      transition: 0.3s;
+
+      animation: socialFloat 3s ease-in-out infinite;
+    }
+
+    .social-btn:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .social-btn:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .social-btn:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .social-btn:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+
+    .social-btn:nth-child(6) {
+      animation-delay: 1s;
+    }
+
+    .social-btn:nth-child(7) {
+      animation-delay: 1.2s;
+    }
+
+
+    @keyframes socialFloat {
+
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+
+    }
+
+
+    .social-btn:hover {
+
+      transform: scale(1.1) translateY(-5px);
+
+      background: #38bdf8;
+
+      color: #020617;
+
+      box-shadow:
+        0 0 25px rgba(56,189,248,0.7);
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    section {
+      padding: 70px 10%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      max-width: 750px;
+      margin: auto;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    #contact {
+      padding-bottom: 100px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+      text-align: center;
+
+      padding: 25px;
+
+      background: rgba(2,6,23,0.8);
+
+      color: #94a3b8;
+
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav h2 {
+        font-size: 18px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .social-btn {
+        min-width: 120px;
+        padding: 12px 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <h2>YUWAKSHAN</h2>
+
+    <div>
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#social">Social</a>
+
+      <a href="#contact">Contact</a>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- =========================
+       HOME
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Hello, I'm
+        <span>Yuwakshan Sivakumar</span>
+      </h1>
+
+
+      <!-- Profile Image -->
+
+      <img
+        src="IMG_20260121_185335.jpg"
+        alt="Yuwakshan Sivakumar"
+        class="profile-img"
+      >
+
+
+      <p>
+        Advanced Level Student • Physical Science
+      </p>
+
+
+      <a class="btn" href="#about">
+        Explore My Website
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+
+      Welcome to my personal website.
+
+      I am an Advanced Level student in the Physical Science stream.
+
+      This website is a place to share my interests,
+      studies, projects and articles.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- =========================
+       SOCIAL MEDIA
+  ========================= -->
+
+  <section class="social-section" id="social">
+
+    <h2>Connect With Me</h2>
+
+    <p>
+      Follow and connect with me on social media.
+    </p>
+
+
+    <div class="social-links">
+
+
+      <!-- Instagram -->
+
+      <a
+        href="YOUR_INSTAGRAM_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        📸 Instagram
+      </a>
+
+
+      <!-- WhatsApp -->
+
+      <a
+        href="YOUR_WHATSAPP_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        💬 WhatsApp
+      </a>
+
+
+      <!-- Facebook -->
+
+      <a
+        href="YOUR_FACEBOOK_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        👍 Facebook
+      </a>
+
+
+      <!-- X -->
+
+      <a
+        href="YOUR_X_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        𝕏 X
+      </a>
+
+
+      <!-- Snapchat -->
+
+      <a
+        href="YOUR_SNAPCHAT_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        👻 Snapchat
+      </a>
+
+
+      <!-- YouTube -->
+
+      <a
+        href="YOUR_YOUTUBE_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        ▶️ YouTube
+      </a>
+
+
+      <!-- Telegram -->
+
+      <a
+        href="YOUR_TELEGRAM_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        ✈️ Telegram
+      </a>
+
+
+      <!-- ==================================
+           ADD MORE SOCIAL MEDIA HERE
+           
+           Copy this block and change
+           the link + name.
+           ================================== -->
+
+      <!--
+      <a
+        href="YOUR_NEW_SOCIAL_LINK"
+        target="_blank"
+        class="social-btn"
+      >
+        🌐 New Social Media
+      </a>
+      -->
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+      Thanks for visiting my website!
+    </p>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    © 2026 Yuwakshan. All Rights Reserved.
+
+  </footer>
+
+
+</body>
+</html>
