@@ -1217,81 +1217,440 @@
 
 
 
-    <!-- ==================================================
-         SOCIAL
-    ================================================== -->
+    <!-- ================= SOCIAL MEDIA ================= -->
+<section class="social-section" id="social">
+  <div class="social-container">
 
-    <section id="social">
+    <div class="section-title">
+      <span>CONNECT WITH ME</span>
+      <h2>My Social Media</h2>
+      <p>Follow me and stay connected 🚀</p>
+    </div>
 
-      <h2 class="section-title">
-        Connect With Me
-      </h2>
+    <div class="social-grid">
 
-      <p class="section-subtitle">
-        Find me on social media
-      </p>
+      <!-- Instagram -->
+      <a class="social-card instagram"
+         href="https://www.instagram.com/yuwakshan?stkn=MTFhaTZoYTNidTc0MA=="
+         target="_blank"
+         rel="noopener noreferrer">
+        <div class="social-icon">📸</div>
+        <div class="social-info">
+          <h3>Instagram</h3>
+          <p>@yuwakshan</p>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="social-card whatsapp"
+         href="https://wa.me/94789890427"
+         target="_blank"
+         rel="noopener noreferrer">
+        <div class="social-icon">💬</div>
+        <div class="social-info">
+          <h3>WhatsApp</h3>
+          <p>Chat with me</p>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- Facebook -->
+      <a class="social-card facebook"
+         href="https://www.facebook.com/share/1FCw6rezFd/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <div class="social-icon">f</div>
+        <div class="social-info">
+          <h3>Facebook</h3>
+          <p>Connect with me</p>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- X -->
+      <a class="social-card x-social"
+         href="https://x.com/Yuwakshan"
+         target="_blank"
+         rel="noopener noreferrer">
+        <div class="social-icon">𝕏</div>
+        <div class="social-info">
+          <h3>X</h3>
+          <p>@Yuwakshan</p>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- Snapchat -->
+      <a class="social-card snapchat"
+         href="https://www.snapchat.com/add/yuwakshan?share_id=IBB55yEc-yY&locale=en-GB"
+         target="_blank"
+         rel="noopener noreferrer">
+        <div class="social-icon">👻</div>
+        <div class="social-info">
+          <h3>Snapchat</h3>
+          <p>@yuwakshan</p>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- YouTube -->
+      <a class="social-card youtube"
+         href="https://www.youtube.com/@withmyuniverse-m3p"
+         target="_blank"
+         rel="noopener noreferrer">
+        <div class="social-icon">▶</div>
+        <div class="social-info">
+          <h3>YouTube</h3>
+          <p>With My Universe</p>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- Telegram -->
+      <a class="social-card telegram"
+         href="https://t.me/Yuwakshan"
+         target="_blank"
+         rel="noopener noreferrer">
+        <div class="social-icon">✈</div>
+        <div class="social-info">
+          <h3>Telegram</h3>
+          <p>@Yuwakshan</p>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 
-      <div class="social-grid">
+<style>
+/* ================= SOCIAL MEDIA STYLE ================= */
+
+.social-section {
+  padding: 90px 20px;
+  position: relative;
+}
+
+.social-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Title */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title span {
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.section-title h2 {
+  margin: 10px 0;
+  font-size: 42px;
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #67e8f9,
+    #a78bfa,
+    #ffffff
+  );
+
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: titleGlow 6s linear infinite;
+}
+
+.section-title p {
+  opacity: 0.65;
+  font-size: 16px;
+}
+
+@keyframes titleGlow {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
 
 
-        <!-- INSTAGRAM -->
+/* Grid */
 
-        <a
-          href="https://www.instagram.com/yuwakshan?stkn=MTFhaTZoYTNidTc0MA=="
-          target="_blank"
-          rel="noopener noreferrer"
-          class="social-card"
-        >
-
-          <div class="social-icon">
-            📸
-          </div>
-
-          <h3>
-            Instagram
-          </h3>
-
-          <p>
-            @yuwakshan
-          </p>
-
-          <span class="social-open">
-            Open →
-          </span>
-
-        </a>
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
 
-        <!-- WHATSAPP -->
+/* Glass Card */
 
-        <a
-          href="https://wa.me/94789890427"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="social-card"
-        >
+.social-card {
+  position: relative;
+  overflow: hidden;
 
-          <div class="social-icon">
-            💬
-          </div>
+  display: flex;
+  align-items: center;
 
-          <h3>
-            WhatsApp
-          </h3>
+  min-height: 95px;
+  padding: 20px 22px;
 
-          <p>
-            Chat with me
-          </p>
+  text-decoration: none;
+  color: white;
 
-          <span class="social-open">
-            Open →
-          </span>
+  border-radius: 22px;
 
-        </a>
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.035)
+    );
+
+  border: 1px solid rgba(255,255,255,0.16);
+
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    0 15px 45px rgba(0,0,0,0.25);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
 
 
-        <!-- FACEBOOK -->
+/* Glass shine */
 
-        <a
-          href="https://www.face
+.social-card::before {
+  content: "";
+
+  position: absolute;
+  inset: -100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 35%,
+      rgba(255,255,255,0.14) 50%,
+      transparent 65%
+    );
+
+  transform: rotate(10deg);
+  transition: 0.7s;
+}
+
+
+/* Glow */
+
+.social-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  right: -70px;
+  bottom: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(103,232,249,0.18);
+
+  filter: blur(35px);
+
+  opacity: 0;
+
+  transition: 0.4s;
+}
+
+
+/* Hover */
+
+.social-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  border-color: rgba(255,255,255,0.32);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    0 25px 60px rgba(0,0,0,0.35);
+}
+
+.social-card:hover::before {
+  inset: 100%;
+}
+
+.social-card:hover::after {
+  opacity: 1;
+}
+
+
+/* Icon */
+
+.social-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  background: rgba(255,255,255,0.1);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12);
+
+  transition: 0.4s;
+}
+
+.social-card:hover .social-icon {
+  transform: rotate(-8deg) scale(1.12);
+}
+
+
+/* Text */
+
+.social-info {
+  position: relative;
+  z-index: 2;
+
+  margin-left: 17px;
+}
+
+.social-info h3 {
+  margin: 0 0 5px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.social-info p {
+  margin: 0;
+
+  font-size: 13px;
+
+  opacity: 0.6;
+}
+
+
+/* Arrow */
+
+.social-arrow {
+  position: relative;
+  z-index: 2;
+
+  margin-left: auto;
+
+  font-size: 24px;
+
+  opacity: 0.45;
+
+  transition: 0.4s;
+}
+
+.social-card:hover .social-arrow {
+  opacity: 1;
+  transform: translate(5px, -5px);
+}
+
+
+/* Platform glow */
+
+.instagram:hover {
+  box-shadow:
+    0 20px 60px rgba(225,48,108,0.25);
+}
+
+.whatsapp:hover {
+  box-shadow:
+    0 20px 60px rgba(37,211,102,0.25);
+}
+
+.facebook:hover {
+  box-shadow:
+    0 20px 60px rgba(24,119,242,0.25);
+}
+
+.x-social:hover {
+  box-shadow:
+    0 20px 60px rgba(255,255,255,0.15);
+}
+
+.snapchat:hover {
+  box-shadow:
+    0 20px 60px rgba(255,255,0,0.20);
+}
+
+.youtube:hover {
+  box-shadow:
+    0 20px 60px rgba(255,0,0,0.25);
+}
+
+.telegram:hover {
+  box-shadow:
+    0 20px 60px rgba(0,136,204,0.25);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .social-section {
+    padding: 70px 15px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .social-card {
+    min-height: 85px;
+    padding: 17px;
+  }
+
+  .social-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+}
+</style>
+
+இந்த section-ஐ உன் existing website-ல் "<!-- SOCIAL MEDIA -->" section இருக்கும் இடத்தில் replace பண்ணலாம். Glass card + shine + hover lift + icon rotation + platform glow எல்லாமே இதில் இருக்கு.
