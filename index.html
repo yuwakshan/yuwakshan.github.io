@@ -3,36 +3,24 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Yuwakshan</title>
 
 <meta name="description" content="Yuwakshan">
-
-<meta name="keywords"
-content="Yuwakshan, Yuwakshan Sivakumar, Yuwakshan Sri Lanka, Physical Science, A/L 2028">
-
+<meta name="keywords" content="Yuwakshan, Yuwakshan Sivakumar, Yuwakshan Sri Lanka, Physical Science, A/L 2028">
 <meta name="author" content="Yuwakshan Sivakumar">
-
 <meta name="robots" content="index, follow">
 
 <meta name="google-site-verification"
 content="O3h0UmiOyKvFsGiKP3uJWnzc-irtKVEqD9LneReM8RU">
 
-<link rel="canonical"
-href="https://yuwakshan.github.io/">
+<link rel="canonical" href="https://yuwakshan.github.io/">
 
 <meta property="og:title" content="Yuwakshan">
-
-<meta property="og:description"
-content="Yuwakshan">
-
-<meta property="og:url"
-content="https://yuwakshan.github.io/">
-
+<meta property="og:description" content="Yuwakshan">
+<meta property="og:url" content="https://yuwakshan.github.io/">
 <meta property="og:type" content="website">
-
 <meta property="og:image"
 content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
 
@@ -338,9 +326,6 @@ font-size:13px;
 font-size:clamp(35px,6vw,55px);
 margin-top:8px;
 }
-
-
-/* GLASS */
 
 .glass{
 background:rgba(255,255,255,.06);
@@ -721,6 +706,53 @@ display:block;
 }
 
 
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.8);
+z-index:3000;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.modal.active{
+display:flex;
+}
+
+.modal-box{
+max-width:500px;
+width:100%;
+padding:30px;
+position:relative;
+}
+
+.close{
+position:absolute;
+right:15px;
+top:10px;
+font-size:25px;
+cursor:pointer;
+color:#aaa;
+}
+
+
+/* STATUS */
+
+.status{
+padding:12px 15px;
+border-radius:12px;
+background:rgba(0,247,255,.07);
+border:1px solid rgba(0,247,255,.15);
+color:#aaa;
+margin-bottom:20px;
+font-size:13px;
+}
+
+
 /* MOBILE */
 
 @media(max-width:850px){
@@ -791,55 +823,7 @@ width:calc(100% - 20px);
 
 }
 
-
-/* MODAL */
-
-.modal{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.8);
-z-index:3000;
-align-items:center;
-justify-content:center;
-padding:20px;
-}
-
-.modal.active{
-display:flex;
-}
-
-.modal-box{
-max-width:500px;
-width:100%;
-padding:30px;
-position:relative;
-}
-
-.close{
-position:absolute;
-right:15px;
-top:10px;
-font-size:25px;
-cursor:pointer;
-color:#aaa;
-}
-
-
-/* STATUS */
-
-.status{
-padding:12px 15px;
-border-radius:12px;
-background:rgba(0,247,255,.07);
-border:1px solid rgba(0,247,255,.15);
-color:#aaa;
-margin-bottom:20px;
-font-size:13px;
-}
-
 </style>
-
 </head>
 
 
@@ -867,15 +851,10 @@ font-size:13px;
 <ul class="nav-links" id="navLinks">
 
 <li><a href="#home">Home</a></li>
-
 <li><a href="#about">About</a></li>
-
 <li><a href="#social">Social</a></li>
-
 <li><a href="#updates">Updates</a></li>
-
 <li><a href="#videos">Videos</a></li>
-
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -883,7 +862,6 @@ font-size:13px;
 <button class="menu-btn" id="menuBtn">☰</button>
 
 </nav>
-
 
 
 <!-- HERO -->
@@ -894,20 +872,22 @@ font-size:13px;
 
 <div class="profile">
 
-<img src="IMG_20260121_185335.jpg"
+<img
+src="IMG_20260121_185335.jpg"
 alt="Yuwakshan">
 
 </div>
 
 <div class="badge">
-Welcome to my personal website
+Welcome to Yuwakshan
 </div>
 
 <h1>Yuwakshan</h1>
 
 <h2>
 Physical Science Student
-<span>•</span> A/L 2028
+<span>•</span>
+A/L 2028
 </h2>
 
 <div class="typing" id="typing"></div>
@@ -915,7 +895,7 @@ Physical Science Student
 <div class="buttons">
 
 <a href="#about" class="btn primary">
-Explore Website
+Explore
 </a>
 
 <a href="#contact" class="btn">
@@ -927,7 +907,6 @@ Contact Me
 </div>
 
 </section>
-
 
 
 <!-- ABOUT -->
@@ -947,7 +926,8 @@ Contact Me
 
 <div class="about-img glass">
 
-<img src="IMG_20260121_185335.jpg"
+<img
+src="IMG_20260121_185335.jpg"
 alt="Yuwakshan">
 
 </div>
@@ -961,7 +941,7 @@ Hi! I'm <b>Yuwakshan</b>.
 
 I'm an Advanced Level Physical Science student from Sri Lanka, A/L 2028 batch.
 
-This website is my personal online space where I can share my updates, projects, videos and social media.
+This is Yuwakshan's online space where I share my updates, projects, videos and social media.
 
 </p>
 
@@ -984,7 +964,7 @@ Sri Lanka
 </div>
 
 <div class="info glass">
-<b>Website</b>
+<b>Name</b>
 Yuwakshan
 </div>
 
@@ -995,7 +975,6 @@ Yuwakshan
 </div>
 
 </section>
-
 
 
 <!-- SOCIAL -->
@@ -1014,89 +993,89 @@ Yuwakshan
 <div class="social-grid">
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://www.instagram.com/yuwakshan"
 target="_blank">
 
 <div class="social-icon">📸</div>
-
 <div class="social-name">Instagram</div>
 
 </a>
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://wa.me/94789890427"
 target="_blank">
 
 <div class="social-icon">💬</div>
-
 <div class="social-name">WhatsApp</div>
 
 </a>
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://t.me/Yuwakshan"
 target="_blank">
 
 <div class="social-icon">✈️</div>
-
 <div class="social-name">Telegram</div>
 
 </a>
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://www.facebook.com/share/1DUMgbSXtg/Fb"
 target="_blank">
 
 <div class="social-icon">👥</div>
-
 <div class="social-name">Facebook</div>
 
 </a>
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://x.com/Yuwakshan"
 target="_blank">
 
 <div class="social-icon">𝕏</div>
-
 <div class="social-name">X</div>
 
 </a>
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://www.tiktok.com/@universe0318"
 target="_blank">
 
 <div class="social-icon">🎵</div>
-
 <div class="social-name">TikTok</div>
 
 </a>
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://www.youtube.com/@withmyuniverse-m3p"
 target="_blank">
 
 <div class="social-icon">▶️</div>
-
 <div class="social-name">YouTube</div>
 
 </a>
 
 
-<a class="social glass"
+<a
+class="social glass"
 href="https://github.com/Yuwakshan"
 target="_blank">
 
 <div class="social-icon">💻</div>
-
 <div class="social-name">GitHub</div>
 
 </a>
@@ -1105,7 +1084,6 @@ target="_blank">
 </div>
 
 </section>
-
 
 
 <!-- UPDATES -->
@@ -1122,23 +1100,15 @@ target="_blank">
 
 
 <div id="firebaseStatus" class="status">
-
-Loading updates...
-
+Local updates system
 </div>
 
 
-<!-- STORY STYLE -->
-
 <div id="storyRow" class="story-row"></div>
-
-
-<!-- POSTS -->
 
 <div id="updatesGrid" class="updates"></div>
 
 </section>
-
 
 
 <!-- VIDEOS -->
@@ -1165,7 +1135,6 @@ Loading updates...
 </div>
 
 </section>
-
 
 
 <!-- CONTACT -->
@@ -1229,15 +1198,16 @@ When you click Send Email, your email app/Gmail will open with the message prepa
 </div>
 
 
-
 <div class="contact-box glass">
 
 <h3>Connect With Me</h3>
 
-<div class="buttons"
+<div
+class="buttons"
 style="justify-content:flex-start">
 
-<a class="btn"
+<a
+class="btn"
 href="https://wa.me/94789890427"
 target="_blank">
 
@@ -1245,14 +1215,16 @@ target="_blank">
 
 </a>
 
-<a class="btn"
+<a
+class="btn"
 href="mailto:yuwakshans@gmail.com">
 
 ✉️ Email
 
 </a>
 
-<a class="btn"
+<a
+class="btn"
 href="https://t.me/Yuwakshan"
 target="_blank">
 
@@ -1270,7 +1242,6 @@ target="_blank">
 </section>
 
 
-
 <!-- ADMIN -->
 
 <section class="section admin-panel" id="admin">
@@ -1284,7 +1255,9 @@ target="_blank">
 </div>
 
 
-<div id="adminLogin" class="admin-login glass">
+<div
+id="adminLogin"
+class="admin-login glass">
 
 <h3>Admin Login 🔐</h3>
 
@@ -1310,21 +1283,22 @@ Login
 
 </form>
 
-<p id="loginStatus"
+<p
+id="loginStatus"
 class="email-note"></p>
 
 </div>
 
 
-
-<div id="adminDashboard"
+<div
+id="adminDashboard"
 class="admin-dashboard">
 
 
 <div class="admin-grid">
 
 
-<!-- UPDATE ADD -->
+<!-- ADD UPDATE -->
 
 <div class="admin-card glass">
 
@@ -1356,8 +1330,7 @@ Publish Update
 </div>
 
 
-
-<!-- VIDEO ADD -->
+<!-- ADD VIDEO -->
 
 <div class="admin-card glass">
 
@@ -1391,12 +1364,14 @@ Publish Video
 </div>
 
 
-<div class="admin-card glass"
+<div
+class="admin-card glass"
 style="margin-top:20px">
 
 <h3>Published Content</h3>
 
-<div id="adminList"
+<div
+id="adminList"
 class="admin-list">
 
 </div>
@@ -1419,7 +1394,6 @@ Logout
 </section>
 
 
-
 <!-- FOOTER -->
 
 <footer>
@@ -1435,16 +1409,13 @@ Yuwakshan
 </p>
 
 <p style="margin-top:8px">
-
-Personal Website
-
+Yuwakshan
 </p>
 
 </footer>
 
 
-
-<!-- SCROLL -->
+<!-- SCROLL TOP -->
 
 <button
 class="scroll-top"
@@ -1455,14 +1426,16 @@ id="scrollTop">
 </button>
 
 
-
 <!-- STORY MODAL -->
 
-<div class="modal" id="storyModal">
+<div
+class="modal"
+id="storyModal">
 
 <div class="modal-box glass">
 
-<span class="close"
+<span
+class="close"
 id="closeModal">
 ×
 </span>
@@ -1471,14 +1444,14 @@ id="closeModal">
 id="modalImage"
 style="width:100%;border-radius:15px">
 
-<h3 id="modalTitle"
+<h3
+id="modalTitle"
 style="margin-top:15px">
-
 </h3>
 
-<p id="modalText"
+<p
+id="modalText"
 style="margin-top:10px;color:#bbb;line-height:1.7">
-
 </p>
 
 </div>
@@ -1486,11 +1459,10 @@ style="margin-top:10px;color:#bbb;line-height:1.7">
 </div>
 
 
-
 <script>
 
 
-// NAV MENU
+/* NAV MENU */
 
 const menuBtn =
 document.getElementById("menuBtn");
@@ -1516,17 +1488,19 @@ navLinks.classList.remove("open");
 });
 
 
-// TYPING
+/* TYPING */
 
 const typing =
 document.getElementById("typing");
 
 const words = [
-"Welcome to my website.",
+
+"Welcome to Yuwakshan.",
 "Physical Science Student.",
 "A/L 2028 Batch.",
 "Sharing my daily updates.",
 "Sharing my YouTube videos."
+
 ];
 
 let wi=0;
@@ -1581,14 +1555,14 @@ deleting?50:85
 type();
 
 
-// YEAR
+/* YEAR */
 
 document.getElementById("year")
 .textContent =
 new Date().getFullYear();
 
 
-// EMAIL
+/* EMAIL */
 
 document.getElementById("emailForm")
 .addEventListener("submit",function(e){
@@ -1627,7 +1601,7 @@ window.location.href=mail;
 });
 
 
-// SCROLL TOP
+/* SCROLL TOP */
 
 const scrollTop =
 document.getElementById("scrollTop");
@@ -1656,7 +1630,7 @@ behavior:"smooth"
 };
 
 
-// LOCAL DEMO DATA
+/* LOCAL DATA */
 
 let updates =
 JSON.parse(
@@ -1698,7 +1672,7 @@ return String(text)
 }
 
 
-// YOUTUBE ID
+/* YOUTUBE */
 
 function getYoutubeId(url){
 
@@ -1712,7 +1686,7 @@ return match ? match[1] : "";
 }
 
 
-// RENDER UPDATES
+/* UPDATES */
 
 function renderUpdates(){
 
@@ -1822,6 +1796,7 @@ class="react"
 onclick="react('${item.id}','${emoji}')">
 
 ${emoji}
+
 <span>
 ${reactions[emoji]||0}
 </span>
@@ -1842,6 +1817,8 @@ ${reactions[emoji]||0}
 
 }
 
+
+/* VIDEOS */
 
 function renderVideos(){
 
@@ -1903,7 +1880,7 @@ ${escapeHTML(item.description||"")}
 }
 
 
-// REACTION
+/* REACTION */
 
 function react(id,emoji){
 
@@ -1954,7 +1931,7 @@ renderUpdates();
 }
 
 
-// STORY MODAL
+/* STORY */
 
 function openStory(id){
 
@@ -1991,16 +1968,10 @@ document.getElementById("storyModal")
 };
 
 
-// ADMIN ACCESS
-
-// Change this PIN before using it.
-// For real security use Firebase Authentication.
+/* ADMIN */
 
 const ADMIN_PIN="YUWAKSHAN2028";
 
-
-// Secret admin URL:
-// https://yuwakshan.github.io/#admin
 
 function showAdmin(){
 
@@ -2022,7 +1993,7 @@ showAdmin();
 }
 
 
-// ADMIN LOGIN
+/* ADMIN LOGIN */
 
 document.getElementById("loginForm")
 .addEventListener("submit",function(e){
@@ -2065,7 +2036,7 @@ document.getElementById("loginStatus")
 });
 
 
-// ADD UPDATE
+/* ADD UPDATE */
 
 document.getElementById("updateForm")
 .addEventListener("submit",function(e){
@@ -2117,7 +2088,7 @@ alert("Update published!");
 });
 
 
-// ADD VIDEO
+/* ADD VIDEO */
 
 document.getElementById("videoForm")
 .addEventListener("submit",function(e){
@@ -2169,7 +2140,7 @@ alert("YouTube video added!");
 });
 
 
-// ADMIN LIST
+/* ADMIN LIST */
 
 function renderAdmin(){
 
@@ -2237,7 +2208,7 @@ list.innerHTML=html;
 }
 
 
-// DELETE UPDATE
+/* DELETE UPDATE */
 
 function deleteUpdate(id){
 
@@ -2255,7 +2226,7 @@ renderAdmin();
 }
 
 
-// DELETE VIDEO
+/* DELETE VIDEO */
 
 function deleteVideo(id){
 
@@ -2273,7 +2244,7 @@ renderAdmin();
 }
 
 
-// LOGOUT
+/* LOGOUT */
 
 document.getElementById("logoutBtn")
 .onclick=()=>{
@@ -2287,14 +2258,12 @@ document.getElementById("adminLogin")
 };
 
 
-// INITIAL
+/* INITIAL */
 
 renderUpdates();
-
 renderVideos();
 
 </script>
-
 
 </body>
 </html>
