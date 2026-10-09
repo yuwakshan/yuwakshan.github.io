@@ -1,2269 +1,829 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Yuwakshan</title>
-
-<meta name="description" content="Yuwakshan">
-<meta name="keywords" content="Yuwakshan, Yuwakshan Sivakumar, Yuwakshan Sri Lanka, Physical Science, A/L 2028">
+<meta name="description" content="Yuwakshan — Physical Science student, daily updates, stories and videos.">
+<meta name="keywords" content="Yuwakshan,Yuwakshan Sivakumar,Yuwakshan Sri Lanka,Physical Science,A/L 2028">
 <meta name="author" content="Yuwakshan Sivakumar">
-<meta name="robots" content="index, follow">
-
-<meta name="google-site-verification"
-content="O3h0UmiOyKvFsGiKP3uJWnzc-irtKVEqD9LneReM8RU">
-
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="O3h0UmiOyKvFsGiKP3uJWnzc-irtKVEqD9LneReM8RU">
 <link rel="canonical" href="https://yuwakshan.github.io/">
-
 <meta property="og:title" content="Yuwakshan">
-<meta property="og:description" content="Yuwakshan">
+<meta property="og:description" content="Welcome to Yuwakshan's official website.">
 <meta property="og:url" content="https://yuwakshan.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:image"
-content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
-
-<link rel="icon"
-type="image/jpeg"
-href="IMG_20260121_185335.jpg">
-
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfilePage",
-  "mainEntity":{
-    "@type":"Person",
-    "name":"Yuwakshan",
-    "url":"https://yuwakshan.github.io/",
-    "image":"https://yuwakshan.github.io/IMG_20260121_185335.jpg",
-    "sameAs":[
-      "https://www.instagram.com/yuwakshan",
-      "https://t.me/Yuwakshan",
-      "https://github.com/Yuwakshan",
-      "https://www.facebook.com/share/1DUMgbSXtg/Fb",
-      "https://www.youtube.com/@withmyuniverse-m3p",
-      "https://www.tiktok.com/@universe0318",
-      "https://x.com/Yuwakshan"
-    ]
-  }
-}
-</script>
-
+<meta property="og:image" content="https://yuwakshan.github.io/IMG_20260121_185335.jpg">
+<link rel="icon" href="IMG_20260121_185335.jpg" type="image/jpeg">
+<meta name="theme-color" content="#080a18">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-color:white;
-background:#070914;
-overflow-x:hidden;
-}
-
-body:before{
-content:"";
-position:fixed;
-inset:0;
-z-index:-10;
-background:
-radial-gradient(circle at 10% 10%,rgba(0,247,255,.15),transparent 30%),
-radial-gradient(circle at 90% 20%,rgba(130,50,255,.18),transparent 30%),
-radial-gradient(circle at 50% 100%,rgba(255,0,170,.12),transparent 35%);
-animation:bgmove 12s infinite alternate;
-}
-
-@keyframes bgmove{
-from{transform:scale(1)}
-to{transform:scale(1.08)}
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-button,
-input,
-textarea{
-font:inherit;
-}
-
-img{
-max-width:100%;
-}
-
-
-/* PARTICLES */
-
-.particles{
-position:fixed;
-inset:0;
-z-index:-2;
-pointer-events:none;
-overflow:hidden;
-}
-
-.particle{
-position:absolute;
-width:4px;
-height:4px;
-background:white;
-border-radius:50%;
-opacity:.5;
-animation:particle 12s linear infinite;
-}
-
-.particle:nth-child(1){left:10%;animation-duration:10s}
-.particle:nth-child(2){left:25%;animation-duration:14s}
-.particle:nth-child(3){left:40%;animation-duration:18s}
-.particle:nth-child(4){left:55%;animation-duration:12s}
-.particle:nth-child(5){left:70%;animation-duration:16s}
-.particle:nth-child(6){left:85%;animation-duration:20s}
-
-@keyframes particle{
-0%{top:110%;opacity:0}
-20%{opacity:.8}
-80%{opacity:.8}
-100%{top:-10%;opacity:0}
-}
-
-
-/* NAVBAR */
-
-.navbar{
-position:fixed;
-top:18px;
-left:50%;
-transform:translateX(-50%);
-width:calc(100% - 30px);
-max-width:1200px;
-padding:14px 20px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-background:rgba(255,255,255,.07);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,.15);
-border-radius:20px;
-z-index:1000;
-}
-
-.logo{
-font-size:22px;
-font-weight:900;
-letter-spacing:3px;
-background:linear-gradient(90deg,#00f7ff,#8d5cff,#ff3dcc);
--webkit-background-clip:text;
-color:transparent;
-}
-
-.nav-links{
-display:flex;
-gap:6px;
-list-style:none;
-}
-
-.nav-links a{
-padding:10px 14px;
-border-radius:12px;
-color:#bbb;
-transition:.3s;
-}
-
-.nav-links a:hover{
-background:rgba(255,255,255,.1);
-color:white;
-}
-
-.menu-btn{
-display:none;
-background:rgba(255,255,255,.1);
-color:white;
-border:0;
-font-size:23px;
-padding:8px 12px;
-border-radius:12px;
-}
-
-
-/* HERO */
-
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:140px 20px 80px;
-}
-
-.hero-content{
-max-width:850px;
-}
-
-.profile{
-width:180px;
-height:180px;
-padding:5px;
-margin:auto auto 30px;
-border-radius:50%;
-background:linear-gradient(135deg,#00f7ff,#7b2cff,#ff00c8);
-animation:float 5s ease-in-out infinite;
-}
-
-.profile img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:50%;
-border:5px solid #080b18;
-}
-
-@keyframes float{
-50%{transform:translateY(-12px)}
-}
-
-.badge{
-display:inline-block;
-padding:9px 16px;
-border-radius:30px;
-background:rgba(255,255,255,.07);
-border:1px solid rgba(255,255,255,.14);
-color:#bbb;
-margin-bottom:18px;
-}
-
-.hero h1{
-font-size:clamp(55px,10vw,105px);
-font-weight:900;
-letter-spacing:-4px;
-background:linear-gradient(90deg,#fff,#00f7ff,#a77cff,#fff);
-background-size:250%;
--webkit-background-clip:text;
-color:transparent;
-animation:gradient 5s linear infinite;
-}
-
-@keyframes gradient{
-to{background-position:250%}
-}
-
-.hero h2{
-font-size:clamp(20px,4vw,32px);
-margin-top:20px;
-}
-
-.hero h2 span{
-color:#00f7ff;
-}
-
-.typing{
-margin-top:14px;
-color:#aaa;
-font-size:18px;
-min-height:25px;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-gap:14px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.btn{
-padding:14px 22px;
-border-radius:14px;
-border:1px solid rgba(255,255,255,.15);
-background:rgba(255,255,255,.08);
-color:white;
-cursor:pointer;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-4px);
-}
-
-.primary{
-border:0;
-background:linear-gradient(135deg,#00cfff,#744cff);
-}
-
-
-/* SECTIONS */
-
-.section{
-width:min(1150px,calc(100% - 35px));
-margin:auto;
-padding:100px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:45px;
-}
-
-.section-title span{
-color:#00f7ff;
-letter-spacing:4px;
-font-size:13px;
-}
-
-.section-title h2{
-font-size:clamp(35px,6vw,55px);
-margin-top:8px;
-}
-
-.glass{
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.13);
-backdrop-filter:blur(18px);
-border-radius:25px;
-}
-
-
-/* ABOUT */
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.about-img{
-overflow:hidden;
-border-radius:25px;
-border:1px solid rgba(255,255,255,.15);
-}
-
-.about-img img{
-width:100%;
-display:block;
-transition:.6s;
-}
-
-.about-img:hover img{
-transform:scale(1.08);
-}
-
-.about-text{
-color:#bbb;
-font-size:17px;
-line-height:1.8;
-}
-
-.info-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-margin-top:25px;
-}
-
-.info{
-padding:20px;
-}
-
-.info b{
-display:block;
-color:#00f7ff;
-margin-bottom:5px;
-}
-
-
-/* SOCIAL */
-
-.social-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:16px;
-}
-
-.social{
-padding:25px 15px;
-text-align:center;
-transition:.3s;
-}
-
-.social:hover{
-transform:translateY(-7px);
-}
-
-.social-icon{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.social-name{
-font-weight:bold;
-}
-
-
-/* STORIES */
-
-.story-row{
-display:flex;
-gap:15px;
-overflow-x:auto;
-padding:10px 3px 20px;
-scrollbar-width:none;
-}
-
-.story-row::-webkit-scrollbar{
-display:none;
-}
-
-.story{
-min-width:100px;
-text-align:center;
-cursor:pointer;
-}
-
-.story-ring{
-width:85px;
-height:85px;
-padding:3px;
-border-radius:50%;
-background:linear-gradient(135deg,#00f7ff,#ff00c8,#7b2cff);
-margin:auto;
-}
-
-.story-ring img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:50%;
-border:3px solid #080914;
-}
-
-.story small{
-display:block;
-margin-top:7px;
-color:#bbb;
-white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis;
-}
-
-
-/* UPDATES */
-
-.updates{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-.update{
-overflow:hidden;
-}
-
-.update img{
-width:100%;
-max-height:350px;
-object-fit:cover;
-}
-
-.update-body{
-padding:22px;
-}
-
-.update-body h3{
-font-size:23px;
-margin-bottom:10px;
-}
-
-.update-body p{
-color:#bbb;
-line-height:1.7;
-white-space:pre-wrap;
-}
-
-.date{
-font-size:12px;
-color:#777;
-margin-top:12px;
-display:block;
-}
-
-.reactions{
-display:flex;
-gap:7px;
-flex-wrap:wrap;
-margin-top:18px;
-}
-
-.react{
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.12);
-color:white;
-padding:8px 11px;
-border-radius:20px;
-cursor:pointer;
-transition:.2s;
-}
-
-.react:hover{
-transform:scale(1.08);
-background:rgba(255,255,255,.15);
-}
-
-
-/* VIDEOS */
-
-.video-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:22px;
-}
-
-.video{
-overflow:hidden;
-}
-
-.video iframe{
-width:100%;
-aspect-ratio:16/9;
-border:0;
-display:block;
-}
-
-.video-body{
-padding:18px;
-}
-
-.video-body h3{
-margin-bottom:7px;
-}
-
-.video-body p{
-color:#aaa;
-}
-
-
-/* CONTACT */
-
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-.contact-box{
-padding:28px;
-}
-
-.contact-box h3{
-margin-bottom:15px;
-}
-
-.form{
-display:grid;
-gap:14px;
-}
-
-.form input,
-.form textarea{
-width:100%;
-padding:15px;
-border-radius:13px;
-border:1px solid rgba(255,255,255,.15);
-background:rgba(255,255,255,.06);
-color:white;
-outline:none;
-}
-
-.form textarea{
-min-height:150px;
-resize:vertical;
-}
-
-.form input::placeholder,
-.form textarea::placeholder{
-color:#777;
-}
-
-.email-note{
-color:#888;
-font-size:13px;
-margin-top:12px;
-line-height:1.5;
-}
-
-
-/* ADMIN */
-
-.admin-panel{
-display:none;
-}
-
-.admin-panel.active{
-display:block;
-}
-
-.admin-login{
-max-width:500px;
-margin:auto;
-padding:30px;
-}
-
-.admin-dashboard{
-display:none;
-}
-
-.admin-dashboard.active{
-display:block;
-}
-
-.admin-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.admin-card{
-padding:25px;
-}
-
-.admin-card h3{
-margin-bottom:18px;
-}
-
-.admin-list{
-margin-top:25px;
-display:grid;
-gap:12px;
-}
-
-.admin-item{
-padding:15px;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.1);
-border-radius:14px;
-display:flex;
-justify-content:space-between;
-gap:10px;
-align-items:center;
-}
-
-.delete-btn{
-background:#ff3158;
-border:0;
-color:white;
-padding:8px 12px;
-border-radius:9px;
-cursor:pointer;
-}
-
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:50px 20px;
-color:#777;
-border-top:1px solid rgba(255,255,255,.08);
-}
-
-.footer-name{
-color:#00f7ff;
-font-weight:bold;
-}
-
-
-/* SCROLL TOP */
-
-.scroll-top{
-position:fixed;
-right:20px;
-bottom:20px;
-width:45px;
-height:45px;
-border:0;
-border-radius:50%;
-background:linear-gradient(135deg,#00cfff,#744cff);
-color:white;
-cursor:pointer;
-display:none;
-z-index:999;
-}
-
-.scroll-top.show{
-display:block;
-}
-
-
-/* MODAL */
-
-.modal{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.8);
-z-index:3000;
-align-items:center;
-justify-content:center;
-padding:20px;
-}
-
-.modal.active{
-display:flex;
-}
-
-.modal-box{
-max-width:500px;
-width:100%;
-padding:30px;
-position:relative;
-}
-
-.close{
-position:absolute;
-right:15px;
-top:10px;
-font-size:25px;
-cursor:pointer;
-color:#aaa;
-}
-
-
-/* STATUS */
-
-.status{
-padding:12px 15px;
-border-radius:12px;
-background:rgba(0,247,255,.07);
-border:1px solid rgba(0,247,255,.15);
-color:#aaa;
-margin-bottom:20px;
-font-size:13px;
-}
-
-
-/* MOBILE */
-
+:root {
+  --bg:#080a18; --panel:rgba(255,255,255,.065);
+  --line:rgba(255,255,255,.13); --cyan:#00f0ff;
+  --purple:#8655ff; --pink:#ff42c6; --muted:#a7abc0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#fff;line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 10% 10%,#00d9ff20,transparent 35%),radial-gradient(ellipse at 90% 25%,#8b35ff25,transparent 35%),radial-gradient(ellipse at 50% 100%,#ff00b518,transparent 40%)}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button,a{ -webkit-tap-highlight-color:transparent }
+button{cursor:pointer}
+img,video{max-width:100%}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+#particles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.spark{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.5;animation:rise 14s linear infinite}
+.spark:nth-child(1){left:10%;animation-duration:11s}
+.spark:nth-child(2){left:25%;animation-duration:16s}
+.spark:nth-child(3){left:40%;animation-duration:13s}
+.spark:nth-child(4){left:58%;animation-duration:18s}
+.spark:nth-child(5){left:75%;animation-duration:12s}
+.spark:nth-child(6){left:90%;animation-duration:20s}
+@keyframes rise{from{top:110%;opacity:0}20%{opacity:.7}80%{opacity:.7}to{top:-5%;opacity:0}}
+.navbar{position:fixed;z-index:1000;top:14px;left:50%;transform:translateX(-50%);width:min(1200px,calc(100% - 26px));display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px;background:#101326dc;border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(22px);box-shadow:0 15px 45px #0005}
+.logo{font-size:21px;font-weight:900;letter-spacing:1.5px;white-space:nowrap;background:linear-gradient(90deg,var(--cyan),#a38aff,var(--pink));background-clip:text;-webkit-background-clip:text;color:transparent}
+.nav-links{list-style:none;display:flex;align-items:center;gap:4px}
+.nav-links a{display:block;padding:9px 11px;color:#c2c4d4;border-radius:11px;font-size:14px;transition:.25s}
+.nav-links a:hover{background:#ffffff13;color:#fff}
+.menu-btn{display:none;border:1px solid var(--line);border-radius:10px;padding:7px 12px;background:#ffffff0e;color:white;font-size:22px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:145px 20px 75px}
+.hero-content{max-width:850px}
+.profile{width:166px;height:166px;margin:0 auto 25px;padding:5px;border-radius:50%;background:conic-gradient(var(--cyan),var(--purple),var(--pink),var(--cyan));box-shadow:0 0 35px #00eaff30;animation:float 5s ease-in-out infinite}
+.profile img{width:100%;height:100%;object-fit:cover;border:5px solid #0b0d20;border-radius:50%}
+@keyframes float{50%{transform:translateY(-9px)}}
+.badge{display:inline-block;padding:7px 15px;margin-bottom:13px;border:1px solid var(--line);border-radius:30px;background:#ffffff09;color:#c8ccdc;font-size:13px}
+.hero h1{font-size:clamp(48px,10vw,100px);line-height:1.12;letter-spacing:-3px;font-weight:900;background:linear-gradient(100deg,#fff,var(--cyan),#b49aff,#fff);background-size:250%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:250%}}
+.hero h2{font-size:clamp(18px,3.8vw,30px);margin-top:18px}
+.hero h2 span{color:var(--cyan)}
+.typing{min-height:30px;color:var(--muted);margin-top:12px}
+.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:13px;border:1px solid var(--line);background:#ffffff0c;color:#fff;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0005}
+.primary{background:linear-gradient(135deg,#00aeea,#7047ed);border-color:transparent}
+.section{width:min(1120px,calc(100% - 32px));margin:auto;padding:80px 0}
+.section-title{text-align:center;margin-bottom:36px}
+.section-title>span{font-size:12px;letter-spacing:4px;color:var(--cyan)}
+.section-title h2{font-size:clamp(31px,5vw,49px);line-height:1.2;margin-top:6px}
+.glass{background:var(--panel);border:1px solid var(--line);border-radius:23px;backdrop-filter:blur(17px);box-shadow:0 18px 55px #0002}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
+.about-img{overflow:hidden}
+.about-img img{display:block;width:100%;max-height:480px;object-fit:cover;transition:transform .5s}
+.about-img:hover img{transform:scale(1.035)}
+.about-text{color:#c0c2d0;font-size:16px;line-height:1.9}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.info{padding:17px}
+.info b{display:block;color:var(--cyan);margin-bottom:3px}
+.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.social{padding:23px 10px;text-align:center;transition:.25s}
+.social:hover{transform:translateY(-5px);border-color:#00eaff66}
+.social-icon{font-size:29px;margin-bottom:7px}
+.social-name{font-weight:bold}
+.story-row{display:flex;gap:17px;overflow-x:auto;padding:5px 2px 18px;scrollbar-width:thin;scrollbar-color:#393654 transparent}
+.story{min-width:91px;width:91px;text-align:center;cursor:pointer}
+.story-ring{width:78px;height:78px;padding:3px;border-radius:50%;margin:auto;background:linear-gradient(135deg,var(--cyan),var(--pink),var(--purple))}
+.story-ring img{width:100%;height:100%;object-fit:cover;border:3px solid #0b0d20;border-radius:50%}
+.story small{display:block;color:#c7c8d5;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.story-label{font-size:10px;color:var(--cyan)}
+.updates,.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.update,.video{min-width:0;overflow:hidden}
+.update>img{display:block;width:100%;max-height:390px;object-fit:cover}
+.update-body,.video-body{padding:21px}
+.update-body h3,.video-body h3{font-size:21px;margin-bottom:8px;overflow-wrap:anywhere}
+.update-body p,.video-body p{color:#c1c3d1;white-space:pre-wrap;overflow-wrap:anywhere}
+.date{display:block;margin-top:11px;font-size:12px;color:#8c90a7}
+.reactions{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}
+.react{padding:6px 10px;border:1px solid var(--line);border-radius:20px;background:#ffffff09;color:white}
+.react:disabled{opacity:.65;cursor:default}
+.video iframe{width:100%;aspect-ratio:16/9;display:block;border:0;background:#000}
+.status{padding:12px 15px;margin-bottom:18px;border-radius:12px;background:#00eaff0a;border:1px solid #00eaff22;color:#bfc3d5;font-size:13px;overflow-wrap:anywhere}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-box{padding:25px;min-width:0}
+.contact-box h3{margin-bottom:15px}
+.form{display:grid;gap:12px}
+.form input,.form textarea,.form select{width:100%;min-width:0;padding:13px;border:1px solid var(--line);border-radius:12px;background:#0d1023;color:#fff}
+.form input::placeholder,.form textarea::placeholder{color:#81859c}
+.form textarea{min-height:120px;resize:vertical}
+.email-note{margin-top:12px;font-size:12px;color:#9296ad}
+.admin-panel{display:none}
+.admin-panel.active{display:block}
+.admin-login{max-width:480px;margin:auto;padding:25px}
+.admin-dashboard{display:none}
+.admin-dashboard.active{display:block}
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.admin-card{padding:23px;min-width:0}
+.admin-card h3{margin-bottom:15px}
+.admin-list{display:grid;gap:10px;margin-top:18px}
+.admin-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;background:#ffffff08;border:1px solid var(--line);border-radius:12px;overflow-wrap:anywhere}
+.admin-item span{min-width:0}
+.admin-actions{display:flex;flex-wrap:wrap;gap:6px}
+.small-btn{padding:7px 10px;border:1px solid var(--line);border-radius:9px;background:#ffffff0b;color:white}
+.delete-btn{background:#b91c45}
+.hidden{display:none!important}
+footer{text-align:center;padding:38px 20px;color:#8589a1;border-top:1px solid #ffffff12}
+.footer-name{color:var(--cyan);font-weight:bold}
+.scroll-top{position:fixed;right:18px;bottom:18px;z-index:900;width:44px;height:44px;border:0;border-radius:50%;color:#fff;background:linear-gradient(135deg,#00bfe9,#7545e8);display:none}
+.scroll-top.show{display:block}
+.modal{display:none;position:fixed;z-index:3000;inset:0;padding:18px;background:#000c;align-items:center;justify-content:center}
+.modal.active{display:flex}
+.modal-box{position:relative;width:min(480px,100%);max-height:90vh;overflow:auto;padding:22px}
+.modal-box img{width:100%;max-height:65vh;object-fit:contain;border-radius:13px}
+.close{position:absolute;right:12px;top:8px;border:0;background:#101326;color:#fff;border-radius:50%;width:35px;height:35px;font-size:24px;z-index:2}
+#notice{position:fixed;z-index:5000;bottom:75px;left:50%;transform:translateX(-50%);max-width:90%;padding:12px 17px;border:1px solid var(--line);border-radius:12px;background:#15182b;color:#fff;display:none;overflow-wrap:anywhere}
+#notice.show{display:block}
 @media(max-width:850px){
-
-.nav-links{
-display:none;
-position:absolute;
-top:70px;
-left:0;
-right:0;
-padding:15px;
-flex-direction:column;
-background:rgba(10,12,25,.95);
-border-radius:18px;
+ .menu-btn{display:block}
+ .nav-links{display:none;position:absolute;top:65px;left:0;right:0;padding:12px;background:#101326f5;border:1px solid var(--line);border-radius:16px;flex-direction:column;align-items:stretch}
+ .nav-links.open{display:flex}
+ .nav-links a{padding:11px}
+ .about,.contact-grid,.admin-grid{grid-template-columns:1fr}
+ .social-grid{grid-template-columns:repeat(2,1fr)}
 }
-
-.nav-links.open{
-display:flex;
+@media(max-width:560px){
+ .navbar{padding:10px 13px}
+ .logo{font-size:18px;letter-spacing:1px}
+ .hero h1{letter-spacing:-2px}
+ .profile{width:140px;height:140px}
+ .section{padding:62px 0}
+ .info-grid{grid-template-columns:1fr 1fr}
+ .updates,.video-grid{grid-template-columns:1fr}
+ .contact-box,.admin-card{padding:18px}
+ .admin-item{align-items:flex-start;flex-direction:column}
 }
-
-.menu-btn{
-display:block;
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}
 }
-
-.about,
-.contact-grid,
-.admin-grid{
-grid-template-columns:1fr;
-}
-
-.social-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.updates,
-.video-grid{
-grid-template-columns:1fr;
-}
-
-}
-
-@media(max-width:500px){
-
-.hero h1{
-letter-spacing:-2px;
-}
-
-.profile{
-width:145px;
-height:145px;
-}
-
-.section{
-padding:75px 0;
-}
-
-.info-grid{
-grid-template-columns:1fr;
-}
-
-.social-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.navbar{
-width:calc(100% - 20px);
-}
-
-}
-
 </style>
 </head>
-
-
 <body>
-
-
-<!-- PARTICLES -->
-
-<div class="particles">
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
+<div id="particles" aria-hidden="true">
+ <i class="spark"></i><i class="spark"></i><i class="spark"></i>
+ <i class="spark"></i><i class="spark"></i><i class="spark"></i>
 </div>
-
-
-<!-- NAVBAR -->
 
 <nav class="navbar">
-
-<a href="#home" class="logo">YU</a>
-
-<ul class="nav-links" id="navLinks">
-
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#social">Social</a></li>
-<li><a href="#updates">Updates</a></li>
-<li><a href="#videos">Videos</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-<button class="menu-btn" id="menuBtn">☰</button>
-
+ <a href="#home" class="logo">Yuwakshan</a>
+ <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+ <ul class="nav-links" id="navLinks">
+  <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+  <li><a href="#social">Social</a></li><li><a href="#updates">Updates</a></li>
+  <li><a href="#videos">Videos</a></li><li><a href="#contact">Contact</a></li>
+ </ul>
 </nav>
 
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<div class="profile">
-
-<img
-src="IMG_20260121_185335.jpg"
-alt="Yuwakshan">
-
-</div>
-
-<div class="badge">
-Welcome to Yuwakshan
-</div>
-
-<h1>Yuwakshan</h1>
-
-<h2>
-Physical Science Student
-<span>•</span>
-A/L 2028
-</h2>
-
-<div class="typing" id="typing"></div>
-
-<div class="buttons">
-
-<a href="#about" class="btn primary">
-Explore
-</a>
-
-<a href="#contact" class="btn">
-Contact Me
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
+<header class="hero" id="home">
+ <div class="hero-content">
+  <div class="profile"><img src="IMG_20260121_185335.jpg" alt="Yuwakshan" onerror="this.style.visibility='hidden'"></div>
+  <span class="badge">✦ Welcome to my official website</span>
+  <h1>Yuwakshan</h1>
+  <h2>Physical Science Student <span>•</span> A/L 2028</h2>
+  <p class="typing" id="typing">Sharing my world with you.</p>
+  <div class="buttons"><a class="btn primary" href="#about">Explore My Website ↗</a><a class="btn" href="#contact">Contact Me ✉</a></div>
+ </div>
+</header>
 
 <section class="section" id="about">
-
-<div class="section-title">
-
-<span>01</span>
-
-<h2>About Me</h2>
-
-</div>
-
-
-<div class="about">
-
-<div class="about-img glass">
-
-<img
-src="IMG_20260121_185335.jpg"
-alt="Yuwakshan">
-
-</div>
-
-
-<div>
-
-<p class="about-text">
-
-Hi! I'm <b>Yuwakshan</b>.
-
-I'm an Advanced Level Physical Science student from Sri Lanka, A/L 2028 batch.
-
-This is Yuwakshan's online space where I share my updates, projects, videos and social media.
-
-</p>
-
-
-<div class="info-grid">
-
-<div class="info glass">
-<b>Education</b>
-Physical Science
-</div>
-
-<div class="info glass">
-<b>Batch</b>
-A/L 2028
-</div>
-
-<div class="info glass">
-<b>Country</b>
-Sri Lanka
-</div>
-
-<div class="info glass">
-<b>Name</b>
-Yuwakshan
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+ <div class="section-title"><span>01 / INTRODUCTION</span><h2>About Me</h2></div>
+ <div class="about">
+  <div class="about-img glass"><img src="IMG_20260121_185335.jpg" alt="Yuwakshan profile photo" loading="lazy" onerror="this.style.display='none'"></div>
+  <div>
+   <p class="about-text">Hi! I'm <b>Yuwakshan</b>, an Advanced Level Physical Science student from Sri Lanka, A/L 2028 batch. This is my online space for sharing updates, stories, projects, videos and social media.</p>
+   <div class="info-grid">
+    <div class="info glass"><b>Education</b>Physical Science</div>
+    <div class="info glass"><b>Batch</b>A/L 2028</div>
+    <div class="info glass"><b>Country</b>Sri Lanka</div>
+    <div class="info glass"><b>Name</b>Yuwakshan</div>
+   </div>
+  </div>
+ </div>
 </section>
-
-
-<!-- SOCIAL -->
 
 <section class="section" id="social">
-
-<div class="section-title">
-
-<span>02</span>
-
-<h2>Social Media</h2>
-
-</div>
-
-
-<div class="social-grid">
-
-
-<a
-class="social glass"
-href="https://www.instagram.com/yuwakshan"
-target="_blank">
-
-<div class="social-icon">📸</div>
-<div class="social-name">Instagram</div>
-
-</a>
-
-
-<a
-class="social glass"
-href="https://wa.me/94789890427"
-target="_blank">
-
-<div class="social-icon">💬</div>
-<div class="social-name">WhatsApp</div>
-
-</a>
-
-
-<a
-class="social glass"
-href="https://t.me/Yuwakshan"
-target="_blank">
-
-<div class="social-icon">✈️</div>
-<div class="social-name">Telegram</div>
-
-</a>
-
-
-<a
-class="social glass"
-href="https://www.facebook.com/share/1DUMgbSXtg/Fb"
-target="_blank">
-
-<div class="social-icon">👥</div>
-<div class="social-name">Facebook</div>
-
-</a>
-
-
-<a
-class="social glass"
-href="https://x.com/Yuwakshan"
-target="_blank">
-
-<div class="social-icon">𝕏</div>
-<div class="social-name">X</div>
-
-</a>
-
-
-<a
-class="social glass"
-href="https://www.tiktok.com/@universe0318"
-target="_blank">
-
-<div class="social-icon">🎵</div>
-<div class="social-name">TikTok</div>
-
-</a>
-
-
-<a
-class="social glass"
-href="https://www.youtube.com/@withmyuniverse-m3p"
-target="_blank">
-
-<div class="social-icon">▶️</div>
-<div class="social-name">YouTube</div>
-
-</a>
-
-
-<a
-class="social glass"
-href="https://github.com/Yuwakshan"
-target="_blank">
-
-<div class="social-icon">💻</div>
-<div class="social-name">GitHub</div>
-
-</a>
-
-
-</div>
-
+ <div class="section-title"><span>02 / CONNECT</span><h2>Social Media</h2></div>
+ <div class="social-grid">
+  <a class="social glass" href="https://www.instagram.com/yuwakshan" target="_blank" rel="noopener noreferrer"><div class="social-icon">📸</div><div class="social-name">Instagram</div></a>
+  <a class="social glass" href="https://wa.me/94789890427" target="_blank" rel="noopener noreferrer"><div class="social-icon">💬</div><div class="social-name">WhatsApp</div></a>
+  <a class="social glass" href="https://t.me/Yuwakshan" target="_blank" rel="noopener noreferrer"><div class="social-icon">✈️</div><div class="social-name">Telegram</div></a>
+  <a class="social glass" href="https://www.facebook.com/share/1DUMgbSXtg/Fb" target="_blank" rel="noopener noreferrer"><div class="social-icon">👥</div><div class="social-name">Facebook</div></a>
+  <a class="social glass" href="https://x.com/Yuwakshan" target="_blank" rel="noopener noreferrer"><div class="social-icon">𝕏</div><div class="social-name">X</div></a>
+  <a class="social glass" href="https://www.tiktok.com/@universe0318" target="_blank" rel="noopener noreferrer"><div class="social-icon">🎵</div><div class="social-name">TikTok</div></a>
+  <a class="social glass" href="https://www.youtube.com/@withmyuniverse-m3p" target="_blank" rel="noopener noreferrer"><div class="social-icon">▶️</div><div class="social-name">YouTube</div></a>
+  <a class="social glass" href="https://github.com/Yuwakshan" target="_blank" rel="noopener noreferrer"><div class="social-icon">💻</div><div class="social-name">GitHub</div></a>
+ </div>
 </section>
-
-
-<!-- UPDATES -->
 
 <section class="section" id="updates">
-
-<div class="section-title">
-
-<span>03</span>
-
-<h2>Daily Updates</h2>
-
-</div>
-
-
-<div id="firebaseStatus" class="status">
-Local updates system
-</div>
-
-
-<div id="storyRow" class="story-row"></div>
-
-<div id="updatesGrid" class="updates"></div>
-
+ <div class="section-title"><span>03 / LATEST</span><h2>Daily Updates</h2></div>
+ <div id="firebaseStatus" class="status" role="status">Connecting to Firebase…</div>
+ <div id="storyRow" class="story-row" aria-label="Stories and highlights"></div>
+ <div id="updatesGrid" class="updates"><div class="status">Loading updates…</div></div>
 </section>
-
-
-<!-- VIDEOS -->
 
 <section class="section" id="videos">
-
-<div class="section-title">
-
-<span>04</span>
-
-<h2>My Videos</h2>
-
-</div>
-
-
-<div id="videoGrid" class="video-grid">
-
-<div class="contact-box glass">
-
-<p>No videos added yet.</p>
-
-</div>
-
-</div>
-
+ <div class="section-title"><span>04 / WATCH</span><h2>My Videos</h2></div>
+ <div id="videoGrid" class="video-grid"><div class="status">Loading videos…</div></div>
 </section>
-
-
-<!-- CONTACT -->
 
 <section class="section" id="contact">
-
-<div class="section-title">
-
-<span>05</span>
-
-<h2>Contact Me</h2>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-box glass">
-
-<h3>Send Me an Email ✉️</h3>
-
-<form id="emailForm" class="form">
-
-<input
-id="visitorName"
-type="text"
-placeholder="Your Name"
-maxlength="60"
-required>
-
-<input
-id="visitorEmail"
-type="email"
-placeholder="Your Email"
-required>
-
-<textarea
-id="visitorMessage"
-placeholder="Write your message..."
-maxlength="1000"
-required></textarea>
-
-<button
-type="submit"
-class="btn primary">
-
-✉️ Send Email
-
-</button>
-
-</form>
-
-
-<p class="email-note">
-
-When you click Send Email, your email app/Gmail will open with the message prepared. You need to press Send.
-
-</p>
-
-</div>
-
-
-<div class="contact-box glass">
-
-<h3>Connect With Me</h3>
-
-<div
-class="buttons"
-style="justify-content:flex-start">
-
-<a
-class="btn"
-href="https://wa.me/94789890427"
-target="_blank">
-
-💬 WhatsApp
-
-</a>
-
-<a
-class="btn"
-href="mailto:yuwakshans@gmail.com">
-
-✉️ Email
-
-</a>
-
-<a
-class="btn"
-href="https://t.me/Yuwakshan"
-target="_blank">
-
-✈️ Telegram
-
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
+ <div class="section-title"><span>05 / SAY HELLO</span><h2>Contact Me</h2></div>
+ <div class="contact-grid">
+  <div class="contact-box glass">
+   <h3>✉ Send Me an Email</h3>
+   <form id="emailForm" class="form">
+    <input id="visitorName" type="text" placeholder="Your Name" maxlength="60" required>
+    <input id="visitorEmail" type="email" placeholder="Your Email" maxlength="150" required>
+    <textarea id="visitorMessage" placeholder="Write your message…" maxlength="1000" required></textarea>
+    <button class="btn primary" type="submit">✉ Prepare Email</button>
+   </form>
+   <p class="email-note">Your email app opens with the message ready. You must press Send in your email app.</p>
+  </div>
+  <div class="contact-box glass">
+   <h3>Connect With Me</h3>
+   <div class="buttons" style="justify-content:flex-start">
+    <a class="btn" href="https://wa.me/94789890427" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+    <a class="btn" href="mailto:yuwakshans@gmail.com">✉ Email</a>
+    <a class="btn" href="https://t.me/Yuwakshan" target="_blank" rel="noopener noreferrer">✈ Telegram</a>
+   </div>
+  </div>
+ </div>
 </section>
-
-
-<!-- ADMIN -->
 
 <section class="section admin-panel" id="admin">
+ <div class="section-title"><span>PRIVATE AREA</span><h2>Admin Dashboard</h2></div>
+ <div id="adminLogin" class="admin-login glass">
+  <h3>🔐 Admin Login</h3><p class="email-note">Sign in using your Firebase Authentication admin account.</p><br>
+  <form id="loginForm" class="form">
+   <input id="adminEmail" type="email" placeholder="Admin email" autocomplete="username" required>
+   <input id="adminPassword" type="password" placeholder="Password" autocomplete="current-password" required>
+   <button class="btn primary" type="submit">Login</button>
+  </form>
+  <p id="loginStatus" class="email-note" role="status"></p>
+ </div>
 
-<div class="section-title">
+ <div id="adminDashboard" class="admin-dashboard">
+  <div class="status" id="adminStatus">Signed in.</div>
+  <div class="admin-grid">
+   <div class="admin-card glass">
+    <h3>📝 Add / Edit Update</h3>
+    <form id="updateForm" class="form">
+     <input id="updateId" type="hidden">
+     <input id="updateTitle" placeholder="Update title" maxlength="100" required>
+     <textarea id="updateText" placeholder="Write your update…" maxlength="8000" required></textarea>
+     <label for="updateImage">Image file (optional)</label>
+     <input id="updateImage" type="file" accept="image/*">
+     <input id="updateImageUrl" type="url" placeholder="Or image URL (optional)">
+     <label for="updateVideo">Video file (optional)</label>
+     <input id="updateVideo" type="file" accept="video/mp4,video/webm,video/quicktime">
+     <input id="updateVideoUrl" type="url" placeholder="Or video URL (optional)">
+     <button class="btn primary" type="submit">Publish Update</button>
+     <button class="btn hidden" type="button" id="cancelUpdateEdit">Cancel Edit</button>
+    </form>
+    <p class="email-note">Large uploads may be limited by your Firebase Storage plan and rules. You can instead paste a hosted media URL.</p>
+   </div>
 
-<span>ADMIN</span>
+   <div class="admin-card glass">
+    <h3>⭕ Add Story / Highlight</h3>
+    <form id="storyForm" class="form">
+     <input id="storyId" type="hidden">
+     <input id="storyTitle" placeholder="Story title" maxlength="70" required>
+     <textarea id="storyText" placeholder="Story text (optional)" maxlength="4000"></textarea>
+     <label for="storyType">Story type</label>
+     <select id="storyType"><option value="24h">24-hour story</option><option value="highlight">Permanent highlight</option></select>
+     <label for="storyImage">Image file (optional)</label>
+     <input id="storyImage" type="file" accept="image/*">
+     <input id="storyImageUrl" type="url" placeholder="Or image URL (optional)">
+     <button class="btn primary" type="submit">Publish Story</button>
+     <button class="btn hidden" type="button" id="cancelStoryEdit">Cancel Edit</button>
+    </form>
+   </div>
 
-<h2>Admin Dashboard</h2>
-
-</div>
-
-
-<div
-id="adminLogin"
-class="admin-login glass">
-
-<h3>Admin Login 🔐</h3>
-
-<br>
-
-<form id="loginForm" class="form">
-
-<input
-id="adminEmail"
-type="email"
-placeholder="Admin Email"
-required>
-
-<input
-id="adminPassword"
-type="password"
-placeholder="Password"
-required>
-
-<button class="btn primary">
-Login
-</button>
-
-</form>
-
-<p
-id="loginStatus"
-class="email-note"></p>
-
-</div>
-
-
-<div
-id="adminDashboard"
-class="admin-dashboard">
-
-
-<div class="admin-grid">
-
-
-<!-- ADD UPDATE -->
-
-<div class="admin-card glass">
-
-<h3>➕ Add Daily Update</h3>
-
-<form id="updateForm" class="form">
-
-<input
-id="updateTitle"
-placeholder="Update Title"
-maxlength="100"
-required>
-
-<textarea
-id="updateText"
-placeholder="Write your update..."
-required></textarea>
-
-<input
-id="updateImage"
-placeholder="Image URL (optional)">
-
-<button class="btn primary">
-Publish Update
-</button>
-
-</form>
-
-</div>
-
-
-<!-- ADD VIDEO -->
-
-<div class="admin-card glass">
-
-<h3>▶️ Add YouTube Video</h3>
-
-<form id="videoForm" class="form">
-
-<input
-id="videoTitle"
-placeholder="Video Title"
-required>
-
-<input
-id="videoUrl"
-placeholder="YouTube URL"
-required>
-
-<textarea
-id="videoDescription"
-placeholder="Video description"></textarea>
-
-<button class="btn primary">
-Publish Video
-</button>
-
-</form>
-
-</div>
-
-
-</div>
-
-
-<div
-class="admin-card glass"
-style="margin-top:20px">
-
-<h3>Published Content</h3>
-
-<div
-id="adminList"
-class="admin-list">
-
-</div>
-
-</div>
-
-
-<button
-id="logoutBtn"
-class="btn"
-style="margin-top:20px">
-
-Logout
-
-</button>
-
-
-</div>
-
+   <div class="admin-card glass">
+    <h3>▶️ Add / Edit YouTube Video</h3>
+    <form id="videoForm" class="form">
+     <input id="videoId" type="hidden">
+     <input id="videoTitle" placeholder="Video title" maxlength="150" required>
+     <input id="videoUrl" type="url" placeholder="YouTube video URL" required>
+     <textarea id="videoDescription" placeholder="Video description" maxlength="4000"></textarea>
+     <button class="btn primary" type="submit">Publish Video</button>
+     <button class="btn hidden" type="button" id="cancelVideoEdit">Cancel Edit</button>
+    </form>
+   </div>
+  </div>
+  <div class="admin-card glass" style="margin-top:18px">
+   <h3>Manage Published Content</h3>
+   <div id="adminList" class="admin-list">Loading…</div>
+  </div>
+  <button id="logoutBtn" class="btn" style="margin-top:16px">Logout</button>
+ </div>
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-<p>
-
-© <span id="year"></span>
-
-<span class="footer-name">
-Yuwakshan
-</span>
-
-</p>
-
-<p style="margin-top:8px">
-Yuwakshan
-</p>
-
+ <p>© <span id="year"></span> <span class="footer-name">Yuwakshan</span>. All rights reserved.</p>
+ <p style="margin-top:6px">Official Website</p>
 </footer>
 
-
-<!-- SCROLL TOP -->
-
-<button
-class="scroll-top"
-id="scrollTop">
-
-↑
-
-</button>
-
-
-<!-- STORY MODAL -->
-
-<div
-class="modal"
-id="storyModal">
-
-<div class="modal-box glass">
-
-<span
-class="close"
-id="closeModal">
-×
-</span>
-
-<img
-id="modalImage"
-style="width:100%;border-radius:15px">
-
-<h3
-id="modalTitle"
-style="margin-top:15px">
-</h3>
-
-<p
-id="modalText"
-style="margin-top:10px;color:#bbb;line-height:1.7">
-</p>
-
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<div id="storyModal" class="modal" role="dialog" aria-modal="true" aria-label="Story">
+ <div class="modal-box glass">
+  <button class="close" id="closeModal" aria-label="Close story">×</button>
+  <img id="modalImage" alt="Story image" class="hidden">
+  <h3 id="modalTitle" style="margin-top:12px"></h3>
+  <p id="modalText" style="margin-top:8px;white-space:pre-wrap;color:#c1c3d1"></p>
+ </div>
 </div>
-
-</div>
-
-
-<script>
-
-
-/* NAV MENU */
-
-const menuBtn =
-document.getElementById("menuBtn");
-
-const navLinks =
-document.getElementById("navLinks");
-
-menuBtn.addEventListener("click",()=>{
-
-navLinks.classList.toggle("open");
-
-});
-
-document.querySelectorAll(".nav-links a")
-.forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-navLinks.classList.remove("open");
-
-});
-
-});
-
-
-/* TYPING */
-
-const typing =
-document.getElementById("typing");
-
-const words = [
-
-"Welcome to Yuwakshan.",
-"Physical Science Student.",
-"A/L 2028 Batch.",
-"Sharing my daily updates.",
-"Sharing my YouTube videos."
-
-];
-
-let wi=0;
-let ci=0;
-let deleting=false;
-
-function type(){
-
-const word=words[wi];
-
-if(!deleting){
-
-typing.textContent =
-word.substring(0,ci+1);
-
-ci++;
-
-if(ci===word.length){
-
-deleting=true;
-
-setTimeout(type,1200);
-
-return;
-
-}
-
-}else{
-
-typing.textContent =
-word.substring(0,ci-1);
-
-ci--;
-
-if(ci===0){
-
-deleting=false;
-
-wi=(wi+1)%words.length;
-
-}
-
-}
-
-setTimeout(
-type,
-deleting?50:85
-);
-
-}
-
-type();
-
-
-/* YEAR */
-
-document.getElementById("year")
-.textContent =
-new Date().getFullYear();
-
-
-/* EMAIL */
-
-document.getElementById("emailForm")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const name =
-document.getElementById("visitorName")
-.value.trim();
-
-const email =
-document.getElementById("visitorEmail")
-.value.trim();
-
-const message =
-document.getElementById("visitorMessage")
-.value.trim();
-
-const subject =
-"Website Message from "+name;
-
-const body =
-"Name: "+name+
-"\nEmail: "+email+
-"\n\nMessage:\n"+message;
-
-const mail =
-"mailto:yuwakshans@gmail.com"+
-"?subject="+
-encodeURIComponent(subject)+
-"&body="+
-encodeURIComponent(body);
-
-window.location.href=mail;
-
-});
-
-
-/* SCROLL TOP */
-
-const scrollTop =
-document.getElementById("scrollTop");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>500){
-
-scrollTop.classList.add("show");
-
-}else{
-
-scrollTop.classList.remove("show");
-
-}
-
-});
-
-scrollTop.onclick=()=>{
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
+<div id="notice" role="status"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+import {
+ getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut,
+ signInAnonymously
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import {
+ getFirestore, collection, doc, getDoc, getDocs, addDoc, setDoc,
+ updateDoc, deleteDoc, query, orderBy, where, serverTimestamp,
+ runTransaction, onSnapshot
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+import {
+ getStorage, ref, uploadBytes, getDownloadURL
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-storage.js";
+
+/* Your supplied Firebase configuration */
+const firebaseConfig = {
+ apiKey: "AIzaSyC90XsPLEWG5o9UsTomaqa9gY_3ImEfy0k",
+ authDomain: "yuwakshan-website.firebaseapp.com",
+ projectId: "yuwakshan-website",
+ storageBucket: "yuwakshan-website.firebasestorage.app",
+ messagingSenderId: "297236612304",
+ appId: "1:297236612304:web:027581b89858094db5cad5",
+ measurementId: "G-8L1C3QC07B"
 };
 
+/*
+ IMPORTANT:
+ 1. Create the admin user in Firebase Authentication.
+ 2. Set ADMIN_EMAIL to that exact email.
+ 3. Publish the Firestore and Storage rules described after this HTML.
+*/
+const ADMIN_EMAIL = "yuwakshans@gmail.com";
 
-/* LOCAL DATA */
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
 
-let updates =
-JSON.parse(
-localStorage.getItem("yuwakshanUpdates")
-||"[]"
-);
+const $ = id => document.getElementById(id);
+let currentUser = null;
+let unsubscribeUpdates = null;
+let unsubscribeVideos = null;
+let unsubscribeStories = null;
+let updates = [];
+let videos = [];
+let stories = [];
+let noticeTimer;
 
-let videos =
-JSON.parse(
-localStorage.getItem("yuwakshanVideos")
-||"[]"
-);
-
-
-function saveData(){
-
-localStorage.setItem(
-"yuwakshanUpdates",
-JSON.stringify(updates)
-);
-
-localStorage.setItem(
-"yuwakshanVideos",
-JSON.stringify(videos)
-);
-
+function notice(message) {
+ const el = $("notice");
+ el.textContent = message;
+ el.classList.add("show");
+ clearTimeout(noticeTimer);
+ noticeTimer = setTimeout(() => el.classList.remove("show"), 4000);
 }
-
-
-function escapeHTML(text){
-
-return String(text)
-.replaceAll("&","&amp;")
-.replaceAll("<","&lt;")
-.replaceAll(">","&gt;")
-.replaceAll('"',"&quot;")
-.replaceAll("'","&#039;");
-
+function esc(value) {
+ return String(value ?? "").replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+ }[c]));
 }
-
-
-/* YOUTUBE */
-
-function getYoutubeId(url){
-
-const match =
-url.match(
-/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([^&?/]+)/
-);
-
-return match ? match[1] : "";
-
+function safeUrl(value) {
+ try {
+  const u = new URL(value, location.href);
+  return ["https:","http:"].includes(u.protocol) ? u.href : "";
+ } catch { return ""; }
 }
-
-
-/* UPDATES */
-
-function renderUpdates(){
-
-const grid =
-document.getElementById("updatesGrid");
-
-const story =
-document.getElementById("storyRow");
-
-if(updates.length===0){
-
-grid.innerHTML=`
-
-<div class="contact-box glass">
-
-<p>No daily updates yet.</p>
-
-</div>
-
-`;
-
-story.innerHTML="";
-
-return;
-
+function dateText(item) {
+ const d = item.createdAt?.toDate ? item.createdAt.toDate()
+  : item.createdAt ? new Date(item.createdAt) : null;
+ return d && !Number.isNaN(d.getTime()) ? d.toLocaleString() : "";
 }
-
-
-updates.sort(
-(a,b)=>b.time-a.time
-);
-
-
-story.innerHTML =
-updates.map(item=>`
-
-<div
-class="story"
-onclick="openStory('${item.id}')">
-
-<div class="story-ring">
-
-<img
-src="${escapeHTML(
-item.image ||
-"IMG_20260121_185335.jpg"
-)}">
-
-</div>
-
-<small>
-${escapeHTML(item.title)}
-</small>
-
-</div>
-
-`).join("");
-
-
-grid.innerHTML =
-updates.map(item=>{
-
-const reactions =
-item.reactions ||
-{
-"❤️":0,
-"🔥":0,
-"👍":0,
-"😂":0,
-"😮":0
-};
-
-return `
-
-<article class="update glass">
-
-${
-item.image
-?
-`<img
-src="${escapeHTML(item.image)}"
-alt="${escapeHTML(item.title)}">`
-:""
+function isAdmin() {
+ return !!currentUser && !currentUser.isAnonymous &&
+  currentUser.email?.toLowerCase() === ADMIN_EMAIL.toLowerCase();
 }
-
-<div class="update-body">
-
-<h3>
-${escapeHTML(item.title)}
-</h3>
-
-<p>
-${escapeHTML(item.text)}
-</p>
-
-<span class="date">
-${new Date(item.time).toLocaleString()}
-</span>
-
-<div class="reactions">
-
-${["❤️","🔥","👍","😂","😮"]
-.map(emoji=>`
-
-<button
-class="react"
-onclick="react('${item.id}','${emoji}')">
-
-${emoji}
-
-<span>
-${reactions[emoji]||0}
-</span>
-
-</button>
-
-`).join("")}
-
-</div>
-
-</div>
-
-</article>
-
-`;
-
-}).join("");
-
+function showAdmin() {
+ $("admin").classList.add("active");
+ $("admin").scrollIntoView({behavior:"smooth"});
 }
-
-
-/* VIDEOS */
-
-function renderVideos(){
-
-const grid =
-document.getElementById("videoGrid");
-
-if(videos.length===0){
-
-grid.innerHTML=`
-
-<div class="contact-box glass">
-
-<p>No videos added yet.</p>
-
-</div>
-
-`;
-
-return;
-
-}
-
-grid.innerHTML =
-videos.map(item=>{
-
-const id =
-getYoutubeId(item.url);
-
-if(!id)return "";
-
-return `
-
-<article class="video glass">
-
-<iframe
-src="https://www.youtube.com/embed/${id}"
-title="${escapeHTML(item.title)}"
-allowfullscreen>
-</iframe>
-
-<div class="video-body">
-
-<h3>
-${escapeHTML(item.title)}
-</h3>
-
-<p>
-${escapeHTML(item.description||"")}
-</p>
-
-</div>
-
-</article>
-
-`;
-
-}).join("");
-
-}
-
-
-/* REACTION */
-
-function react(id,emoji){
-
-const item =
-updates.find(x=>x.id===id);
-
-if(!item)return;
-
-const key =
-"reaction_"+id;
-
-let reacted =
-JSON.parse(
-localStorage.getItem(key)||"[]"
-);
-
-if(reacted.includes(emoji)){
-
-return;
-
-}
-
-if(!item.reactions){
-
-item.reactions={
-"❤️":0,
-"🔥":0,
-"👍":0,
-"😂":0,
-"😮":0
-};
-
-}
-
-item.reactions[emoji]++;
-
-reacted.push(emoji);
-
-localStorage.setItem(
-key,
-JSON.stringify(reacted)
-);
-
-saveData();
-
-renderUpdates();
-
-}
-
-
-/* STORY */
-
-function openStory(id){
-
-const item =
-updates.find(x=>x.id===id);
-
-if(!item)return;
-
-document.getElementById("modalImage")
-.src =
-item.image ||
-"IMG_20260121_185335.jpg";
-
-document.getElementById("modalTitle")
-.textContent =
-item.title;
-
-document.getElementById("modalText")
-.textContent =
-item.text;
-
-document.getElementById("storyModal")
-.classList.add("active");
-
-}
-
-
-document.getElementById("closeModal")
-.onclick=()=>{
-
-document.getElementById("storyModal")
-.classList.remove("active");
-
-};
-
-
-/* ADMIN */
-
-const ADMIN_PIN="YUWAKSHAN2028";
-
-
-function showAdmin(){
-
-document.getElementById("admin")
-.classList.add("active");
-
-document.getElementById("admin")
-.scrollIntoView({
-behavior:"smooth"
+if (location.hash === "#admin") showAdmin();
+
+/* Mobile menu */
+$("menuBtn").addEventListener("click", () => {
+ const open = $("navLinks").classList.toggle("open");
+ $("menuBtn").setAttribute("aria-expanded", String(open));
+});
+document.querySelectorAll(".nav-links a").forEach(a => a.addEventListener("click", () => {
+ $("navLinks").classList.remove("open");
+ $("menuBtn").setAttribute("aria-expanded","false");
+}));
+
+/* Small animated subtitle */
+const phrases = ["Welcome to Yuwakshan.","Physical Science Student.","A/L 2028 Batch.","Updates • Stories • Videos"];
+let phraseIndex = 0;
+setInterval(() => {
+ phraseIndex = (phraseIndex + 1) % phrases.length;
+ $("typing").textContent = phrases[phraseIndex];
+}, 2600);
+$("year").textContent = new Date().getFullYear();
+
+/* Email form */
+$("emailForm").addEventListener("submit", e => {
+ e.preventDefault();
+ const subject = "Website message from " + $("visitorName").value.trim();
+ const body = "Name: " + $("visitorName").value.trim() +
+  "\nEmail: " + $("visitorEmail").value.trim() +
+  "\n\nMessage:\n" + $("visitorMessage").value.trim();
+ location.href = "mailto:yuwakshans@gmail.com?subject=" +
+  encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 });
 
+/* Scroll-to-top */
+window.addEventListener("scroll", () => {
+ $("scrollTop").classList.toggle("show", window.scrollY > 450);
+});
+$("scrollTop").addEventListener("click", () => window.scrollTo({top:0,behavior:"smooth"}));
+
+/* Public, live Firestore data */
+function startPublicListeners() {
+ if (unsubscribeUpdates) unsubscribeUpdates();
+ if (unsubscribeVideos) unsubscribeVideos();
+ if (unsubscribeStories) unsubscribeStories();
+
+ unsubscribeUpdates = onSnapshot(
+  query(collection(db,"updates"),orderBy("createdAt","desc")),
+  snap => {
+   updates = snap.docs.map(d => ({id:d.id,...d.data()}));
+   renderUpdates();
+   if (isAdmin()) renderAdmin();
+  },
+  err => {
+   console.error(err);
+   $("updatesGrid").innerHTML = '<div class="status">Updates could not load. Check Firestore rules and setup.</div>';
+   $("firebaseStatus").textContent = "Firebase connection issue: " + err.message;
+  }
+ );
+ unsubscribeVideos = onSnapshot(
+  query(collection(db,"videos"),orderBy("createdAt","desc")),
+  snap => {
+   videos = snap.docs.map(d => ({id:d.id,...d.data()}));
+   renderVideos();
+   if (isAdmin()) renderAdmin();
+  },
+  err => {
+   console.error(err);
+   $("videoGrid").innerHTML = '<div class="status">Videos could not load. Check Firestore rules.</div>';
+  }
+ );
+ unsubscribeStories = onSnapshot(
+  query(collection(db,"stories"),orderBy("createdAt","desc")),
+  snap => {
+   stories = snap.docs.map(d => ({id:d.id,...d.data()}));
+   renderStories();
+   if (isAdmin()) renderAdmin();
+  },
+  err => {
+   console.error(err);
+   $("storyRow").innerHTML = "";
+   $("firebaseStatus").textContent = "Stories could not load. Check Firestore rules.";
+  }
+ );
 }
-
-
-if(location.hash==="#admin"){
-
-showAdmin();
-
+function renderUpdates() {
+ $("firebaseStatus").textContent = "Live updates connected to Firebase.";
+ if (!updates.length) {
+  $("updatesGrid").innerHTML = '<div class="contact-box glass"><p>No daily updates yet.</p></div>';
+  return;
+ }
+ $("updatesGrid").innerHTML = updates.map(item => {
+  const image = safeUrl(item.image);
+  const video = safeUrl(item.video);
+  return `<article class="update glass">
+   ${image ? `<img src="${esc(image)}" alt="${esc(item.title)}" loading="lazy">` : ""}
+   <div class="update-body">
+    <h3>${esc(item.title)}</h3>
+    <p>${esc(item.text)}</p>
+    ${video ? (/\.(mp4|webm|ogg)(\?|#|$)/i.test(video)
+      ? `<video controls preload="metadata" style="width:100%;margin-top:12px;border-radius:12px"><source src="${esc(video)}"></video>`
+      : `<p style="margin-top:10px"><a class="btn" href="${esc(video)}" target="_blank" rel="noopener noreferrer">▶ Open video</a></p>`) : ""}
+    <span class="date">${esc(dateText(item))}</span>
+    <div class="reactions" data-reactions="${esc(item.id)}">
+     ${["❤️","🔥","👍","😂","😮"].map(emoji =>
+      `<button class="react" data-react="${esc(item.id)}" data-emoji="${emoji}">${emoji} <span>${Number(item.reactionCounts?.[emoji]||0)}</span></button>`
+     ).join("")}
+    </div>
+   </div>
+  </article>`;
+ }).join("");
+ document.querySelectorAll("[data-react]").forEach(btn => btn.addEventListener("click", () => react(btn.dataset.react,btn.dataset.emoji,btn)));
 }
-
-
-/* ADMIN LOGIN */
-
-document.getElementById("loginForm")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const email =
-document.getElementById("adminEmail")
-.value.trim();
-
-const password =
-document.getElementById("adminPassword")
-.value;
-
-if(
-email==="yuwakshans@gmail.com"
-&&
-password===ADMIN_PIN
-){
-
-document.getElementById("adminLogin")
-.style.display="none";
-
-document.getElementById("adminDashboard")
-.classList.add("active");
-
-document.getElementById("loginStatus")
-.textContent="";
-
-renderAdmin();
-
-}else{
-
-document.getElementById("loginStatus")
-.textContent=
-"Incorrect admin login.";
-
+function renderVideos() {
+ if (!videos.length) {
+  $("videoGrid").innerHTML = '<div class="contact-box glass"><p>No videos added yet.</p></div>';
+  return;
+ }
+ $("videoGrid").innerHTML = videos.map(item => {
+  const id = youtubeId(item.url);
+  return `<article class="video glass">
+   ${id ? `<iframe src="https://www.youtube-nocookie.com/embed/${esc(id)}" title="${esc(item.title)}" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>` : ""}
+   <div class="video-body"><h3>${esc(item.title)}</h3><p>${esc(item.description||"")}</p></div>
+  </article>`;
+ }).join("");
 }
-
+function renderStories() {
+ const now = Date.now();
+ const visible = stories.filter(s => s.type === "highlight" ||
+  !s.expiresAt || (s.expiresAt.toMillis ? s.expiresAt.toMillis() : new Date(s.expiresAt).getTime()) > now);
+ if (!visible.length) {
+  $("storyRow").innerHTML = '<p class="email-note">No stories yet.</p>';
+  return;
+ }
+ $("storyRow").innerHTML = visible.map(s => {
+  const image = safeUrl(s.image);
+  return `<button class="story" type="button" data-story="${esc(s.id)}" style="background:none;border:0;color:inherit">
+   <span class="story-ring">${image ? `<img src="${esc(image)}" alt="" loading="lazy">` : `<span style="display:grid;place-items:center;width:100%;height:100%;border:3px solid #0b0d20;border-radius:50%;font-size:28px">✦</span>`}</span>
+   <small>${esc(s.title)}</small><span class="story-label">${s.type === "highlight" ? "HIGHLIGHT" : "24 HOURS"}</span>
+  </button>`;
+ }).join("");
+ document.querySelectorAll("[data-story]").forEach(btn => btn.addEventListener("click", () => openStory(btn.dataset.story)));
+}
+function openStory(id) {
+ const s = stories.find(x => x.id === id);
+ if (!s) return;
+ const image = safeUrl(s.image);
+ $("modalImage").classList.toggle("hidden",!image);
+ if (image) $("modalImage").src = image;
+ $("modalTitle").textContent = s.title || "";
+ $("modalText").textContent = s.text || "";
+ $("storyModal").classList.add("active");
+}
+$("closeModal").addEventListener("click", () => $("storyModal").classList.remove("active"));
+$("storyModal").addEventListener("click", e => {
+ if (e.target === $("storyModal")) $("storyModal").classList.remove("active");
+});
+document.addEventListener("keydown", e => {
+ if (e.key === "Escape") $("storyModal").classList.remove("active");
 });
 
-
-/* ADD UPDATE */
-
-document.getElementById("updateForm")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const item={
-
-id:
-Date.now().toString(),
-
-title:
-document.getElementById("updateTitle")
-.value.trim(),
-
-text:
-document.getElementById("updateText")
-.value.trim(),
-
-image:
-document.getElementById("updateImage")
-.value.trim(),
-
-time:
-Date.now(),
-
-reactions:{
-"❤️":0,
-"🔥":0,
-"👍":0,
-"😂":0,
-"😮":0
+/* YouTube URL validation */
+function youtubeId(raw) {
+ try {
+  const u = new URL(raw);
+  if (u.hostname === "youtu.be" || u.hostname === "www.youtu.be") {
+   const id = u.pathname.split("/").filter(Boolean)[0];
+   return /^[\w-]{11}$/.test(id||"") ? id : "";
+  }
+  if (["youtube.com","www.youtube.com","m.youtube.com","youtube-nocookie.com","www.youtube-nocookie.com"].includes(u.hostname)) {
+   const parts = u.pathname.split("/").filter(Boolean);
+   const id = u.searchParams.get("v") || (["embed","shorts","live"].includes(parts[0]) ? parts[1] : "");
+   return /^[\w-]{11}$/.test(id||"") ? id : "";
+  }
+ } catch {}
+ return "";
 }
 
-};
+/*
+ Each browser uses anonymous Firebase Authentication for reactions.
+ The Firestore document ID is the visitor UID, allowing one reaction
+ per update per signed-in visitor. A visitor can change browsers/accounts.
+*/
+async function ensureVisitorAuth() {
+ if (!auth.currentUser) await signInAnonymously(auth);
+ return auth.currentUser;
+}
+async function react(updateId,emoji,button) {
+ if (!["❤️","🔥","👍","😂","😮"].includes(emoji)) return;
+ button.disabled = true;
+ try {
+  const visitor = await ensureVisitorAuth();
+  if (!visitor || visitor.isAnonymous !== true) throw new Error("Visitor authentication unavailable.");
+  const reactionRef = doc(db,"updates",updateId,"reactions",visitor.uid);
+  const updateRef = doc(db,"updates",updateId);
+  await runTransaction(db,async tx => {
+   const old = await tx.get(reactionRef);
+   if (old.exists()) throw new Error("You have already reacted to this update.");
+   const parent = await tx.get(updateRef);
+   if (!parent.exists()) throw new Error("This update no longer exists.");
+   tx.set(reactionRef,{uid:visitor.uid,emoji,createdAt:serverTimestamp()});
+   const counts = {...(parent.data().reactionCounts||{})};
+   counts[emoji] = Number(counts[emoji]||0)+1;
+   tx.update(updateRef,{reactionCounts:counts});
+  });
+  notice("Thanks for reacting " + emoji);
+ } catch (e) {
+  console.error(e);
+  notice(e.message?.includes("already reacted") ? "You have already reacted to this update." : "Reaction failed. Check Firebase rules and try again.");
+ } finally { button.disabled = false; }
+}
 
-updates.unshift(item);
+/* Storage uploads */
+async function mediaUrl(file,folder) {
+ if (!file) return "";
+ const maxBytes = folder === "updates" ? 50*1024*1024 : 15*1024*1024;
+ if (file.size > maxBytes) throw new Error("File is too large for this form.");
+ const path = `${folder}/${currentUser.uid}/${Date.now()}_${file.name.replace(/[^a-zA-Z0-9._-]/g,"_")}`;
+ const r = ref(storage,path);
+ await uploadBytes(r,file,{contentType:file.type});
+ return await getDownloadURL(r);
+}
+async function chooseMedia(fileInput,urlInput,folder) {
+ const file = fileInput.files[0];
+ if (file) return await mediaUrl(file,folder);
+ const typed = urlInput.value.trim();
+ if (typed && !safeUrl(typed)) throw new Error("Please enter a valid HTTP or HTTPS media URL.");
+ return typed;
+}
 
-saveData();
-
-renderUpdates();
-
-renderAdmin();
-
-this.reset();
-
-alert("Update published!");
-
+/* Admin login: Firebase Authentication, no hard-coded password */
+$("loginForm").addEventListener("submit",async e => {
+ e.preventDefault();
+ $("loginStatus").textContent = "Signing in…";
+ try {
+  const credential = await signInWithEmailAndPassword(auth,$("adminEmail").value.trim(),$("adminPassword").value);
+  if (credential.user.email?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
+   await signOut(auth);
+   throw new Error("This account is not the configured admin email.");
+  }
+  $("loginStatus").textContent = "";
+ } catch (err) {
+  console.error(err);
+  $("loginStatus").textContent = "Login failed. Check email/password, Authentication setup and admin email.";
+ }
+});
+onAuthStateChanged(auth,user => {
+ currentUser = user;
+ const admin = isAdmin();
+ $("adminLogin").classList.toggle("hidden",admin);
+ $("adminDashboard").classList.toggle("active",admin);
+ if (admin) {
+  $("adminStatus").textContent = "Signed in as " + user.email;
+  renderAdmin();
+ } else {
+  $("adminStatus").textContent = "";
+  if (user && !user.isAnonymous) $("loginStatus").textContent = "Use the configured admin account.";
+ }
+});
+$("logoutBtn").addEventListener("click",async () => {
+ try { await signOut(auth); notice("Logged out."); }
+ catch (e) { notice("Logout failed."); }
 });
 
-
-/* ADD VIDEO */
-
-document.getElementById("videoForm")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const item={
-
-id:
-Date.now().toString(),
-
-title:
-document.getElementById("videoTitle")
-.value.trim(),
-
-url:
-document.getElementById("videoUrl")
-.value.trim(),
-
-description:
-document.getElementById("videoDescription")
-.value.trim(),
-
-time:
-Date.now()
-
-};
-
-if(!getYoutubeId(item.url)){
-
-alert("Please enter a valid YouTube URL.");
-
-return;
-
+/* Form reset helpers */
+function resetUpdateForm() {
+ $("updateForm").reset(); $("updateId").value = "";
+ $("cancelUpdateEdit").classList.add("hidden");
 }
+function resetStoryForm() {
+ $("storyForm").reset(); $("storyId").value = "";
+ $("cancelStoryEdit").classList.add("hidden");
+}
+function resetVideoForm() {
+ $("videoForm").reset(); $("videoId").value = "";
+ $("cancelVideoEdit").classList.add("hidden");
+}
+$("cancelUpdateEdit").addEventListener("click",resetUpdateForm);
+$("cancelStoryEdit").addEventListener("click",resetStoryForm);
+$("cancelVideoEdit").addEventListener("click",resetVideoForm);
 
-videos.unshift(item);
-
-saveData();
-
-renderVideos();
-
-renderAdmin();
-
-this.reset();
-
-alert("YouTube video added!");
-
+/* Add or edit update */
+$("updateForm").addEventListener("submit",async e => {
+ e.preventDefault();
+ if (!isAdmin()) return notice("Admin login required.");
+ const btn = $("updateForm").querySelector('[type="submit"]');
+ btn.disabled = true; btn.textContent = "Saving…";
+ try {
+  const oldId = $("updateId").value;
+  const old = oldId ? updates.find(x => x.id === oldId) : null;
+  const image = await chooseMedia($("updateImage"),$("updateImageUrl"),"updates") || old?.image || "";
+  const video = await chooseMedia($("updateVideo"),$("updateVideoUrl"),"updates") || old?.video || "";
+  const data = {
+   title:$("updateTitle").value.trim(),
+   text:$("updateText").value.trim(),
+   image,video,updatedAt:serverTimestamp()
+  };
+  if (!data.title || !data.text) throw new Error("Title and text are required.");
+  if (oldId) await updateDoc(doc(db,"updates",oldId),data);
+  else await addDoc(collection(db,"updates"),{...data,createdAt:serverTimestamp(),reactionCounts:{"❤️":0,"🔥":0,"👍":0,"😂":0,"😮":0}});
+  resetUpdateForm(); notice(oldId ? "Update edited." : "Update published.");
+ } catch (err) { console.error(err); notice("Could not save update: " + err.message); }
+ finally { btn.disabled=false; btn.textContent="Publish Update"; }
 });
 
-
-/* ADMIN LIST */
-
-function renderAdmin(){
-
-const list =
-document.getElementById("adminList");
-
-let html="";
-
-updates.forEach(item=>{
-
-html+=`
-
-<div class="admin-item">
-
-<span>
-📰 ${escapeHTML(item.title)}
-</span>
-
-<button
-class="delete-btn"
-onclick="deleteUpdate('${item.id}')">
-
-Delete
-
-</button>
-
-</div>
-
-`;
-
+/* Add or edit story / highlight */
+$("storyForm").addEventListener("submit",async e => {
+ e.preventDefault();
+ if (!isAdmin()) return notice("Admin login required.");
+ const btn = $("storyForm").querySelector('[type="submit"]');
+ btn.disabled=true; btn.textContent="Saving…";
+ try {
+  const oldId=$("storyId").value;
+  const old=oldId ? stories.find(x=>x.id===oldId) : null;
+  const image=await chooseMedia($("storyImage"),$("storyImageUrl"),"stories") || old?.image || "";
+  const type=$("storyType").value;
+  const data={
+   title:$("storyTitle").value.trim(),text:$("storyText").value.trim(),
+   type,image,updatedAt:serverTimestamp(),
+   expiresAt:type==="24h" ? new Date(Date.now()+24*60*60*1000) : null
+  };
+  if (!data.title) throw new Error("Story title is required.");
+  if (oldId) await updateDoc(doc(db,"stories",oldId),data);
+  else await addDoc(collection(db,"stories"),{...data,createdAt:serverTimestamp()});
+  resetStoryForm(); notice(oldId ? "Story edited." : "Story published.");
+ } catch(err) { console.error(err); notice("Could not save story: "+err.message); }
+ finally {btn.disabled=false;btn.textContent="Publish Story";}
 });
 
-videos.forEach(item=>{
-
-html+=`
-
-<div class="admin-item">
-
-<span>
-▶️ ${escapeHTML(item.title)}
-</span>
-
-<button
-class="delete-btn"
-onclick="deleteVideo('${item.id}')">
-
-Delete
-
-</button>
-
-</div>
-
-`;
-
+/* Add or edit YouTube video */
+$("videoForm").addEventListener("submit",async e => {
+ e.preventDefault();
+ if (!isAdmin()) return notice("Admin login required.");
+ const btn=$("videoForm").querySelector('[type="submit"]');
+ btn.disabled=true;
+ try {
+  const id=$("videoId").value;
+  const url=$("videoUrl").value.trim();
+  if (!youtubeId(url)) throw new Error("Enter a valid YouTube video, Shorts or youtu.be URL.");
+  const data={title:$("videoTitle").value.trim(),url,description:$("videoDescription").value.trim(),updatedAt:serverTimestamp()};
+  if(id) await updateDoc(doc(db,"videos",id),data);
+  else await addDoc(collection(db,"videos"),{...data,createdAt:serverTimestamp()});
+  resetVideoForm();notice(id?"Video edited.":"Video published.");
+ } catch(err) {console.error(err);notice("Could not save video: "+err.message);}
+ finally {btn.disabled=false;}
 });
 
-if(!html){
-
-html="<p style='color:#777'>No content yet.</p>";
-
+/* Admin edit/delete */
+function editUpdate(id) {
+ const x=updates.find(v=>v.id===id);if(!x)return;
+ $("updateId").value=x.id;$("updateTitle").value=x.title||"";$("updateText").value=x.text||"";
+ $("updateImageUrl").value=x.image||"";$("updateVideoUrl").value=x.video||"";
+ $("cancelUpdateEdit").classList.remove("hidden");
+ $("updateForm").scrollIntoView({behavior:"smooth",block:"center"});
+}
+function editStory(id) {
+ const x=stories.find(v=>v.id===id);if(!x)return;
+ $("storyId").value=x.id;$("storyTitle").value=x.title||"";$("storyText").value=x.text||"";
+ $("storyType").value=x.type||"24h";$("storyImageUrl").value=x.image||"";
+ $("cancelStoryEdit").classList.remove("hidden");
+ $("storyForm").scrollIntoView({behavior:"smooth",block:"center"});
+}
+function editVideo(id) {
+ const x=videos.find(v=>v.id===id);if(!x)return;
+ $("videoId").value=x.id;$("videoTitle").value=x.title||"";$("videoUrl").value=x.url||"";
+ $("videoDescription").value=x.description||"";
+ $("cancelVideoEdit").classList.remove("hidden");
+ $("videoForm").scrollIntoView({behavior:"smooth",block:"center"});
+}
+async function removeContent(kind,id) {
+ if(!isAdmin())return notice("Admin login required.");
+ if(!confirm("Delete this "+kind+" permanently?"))return;
+ try {await deleteDoc(doc(db,kind,id));notice(kind+" deleted.");}
+ catch(e){console.error(e);notice("Delete failed. Check Firestore rules.");}
+}
+function renderAdmin() {
+ if(!isAdmin())return;
+ const all=[
+  ...updates.map(x=>({kind:"updates",id:x.id,title:x.title,edit:"update"})),
+  ...stories.map(x=>({kind:"stories",id:x.id,title:x.title,edit:"story"})),
+  ...videos.map(x=>({kind:"videos",id:x.id,title:x.title,edit:"video"}))
+ ];
+ if(!all.length){$("adminList").innerHTML='<p class="email-note">No published content yet.</p>';return;}
+ $("adminList").innerHTML=all.map(x=>`<div class="admin-item">
+  <span>${x.kind==="updates"?"📰":x.kind==="stories"?"⭕":"▶️"} ${esc(x.title)}</span>
+  <div class="admin-actions">
+   <button class="small-btn" data-edit-kind="${x.edit}" data-edit-id="${esc(x.id)}">Edit</button>
+   <button class="small-btn delete-btn" data-delete-kind="${x.kind}" data-delete-id="${esc(x.id)}">Delete</button>
+  </div>
+ </div>`).join("");
+ document.querySelectorAll("[data-edit-kind]").forEach(b=>b.addEventListener("click",()=>{
+  if(b.dataset.editKind==="update")editUpdate(b.dataset.editId);
+  else if(b.dataset.editKind==="story")editStory(b.dataset.editId);
+  else editVideo(b.dataset.editId);
+ }));
+ document.querySelectorAll("[data-delete-kind]").forEach(b=>b.addEventListener("click",()=>removeContent(b.dataset.deleteKind,b.dataset.deleteId)));
 }
 
-list.innerHTML=html;
+/* Start the public data listeners */
+startPublicListeners();
 
+/* Sign in visitors anonymously for per-visitor reactions.
+   Admin sign-in takes precedence when the admin logs in. */
+try {
+ if (!auth.currentUser) await signInAnonymously(auth);
+} catch (e) {
+ console.warn("Anonymous auth not enabled; reactions will require setup.",e);
 }
-
-
-/* DELETE UPDATE */
-
-function deleteUpdate(id){
-
-if(!confirm("Delete this update?"))return;
-
-updates =
-updates.filter(x=>x.id!==id);
-
-saveData();
-
-renderUpdates();
-
-renderAdmin();
-
-}
-
-
-/* DELETE VIDEO */
-
-function deleteVideo(id){
-
-if(!confirm("Delete this video?"))return;
-
-videos =
-videos.filter(x=>x.id!==id);
-
-saveData();
-
-renderVideos();
-
-renderAdmin();
-
-}
-
-
-/* LOGOUT */
-
-document.getElementById("logoutBtn")
-.onclick=()=>{
-
-document.getElementById("adminDashboard")
-.classList.remove("active");
-
-document.getElementById("adminLogin")
-.style.display="block";
-
-};
-
-
-/* INITIAL */
-
-renderUpdates();
-renderVideos();
-
 </script>
-
 </body>
 </html>
+
